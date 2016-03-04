@@ -17,7 +17,7 @@ object RouteHandlerService {
     implicit val formats = DefaultFormats
     
     // -> BBDS All Businesses
-    def processControllerBBDS_all(queryValue: String = "Null", serviceName : String = "Base Business Details (retrieve all) Service", queryParam : String = "all") : String = {
+    def processControllerBBDS_all(queryValue: String = "All", serviceName : String = "Base Business Details (retrieve all) Service", queryParam : String = "all") : String = {
         val content = ProcessControllerHelper.getRemoteService(serviceName, queryParam, queryValue)
         LoggingSupport.checkReturnType(content)
         return content
