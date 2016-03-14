@@ -5,6 +5,7 @@ import com.support.LoggingSupport
 import net.liftweb.json._
 import net.liftweb.json.Serialization.write
 import scala.io.{Source}
+import java.util.Calendar
 
 object ProcessControllerHelper {
     
@@ -56,8 +57,24 @@ object ProcessControllerHelper {
              
             return content
         }
+        
+        
+  def recordCount(l: IndexedSeq[Any]): Int = { l.length }
     
-    
+   def timeStamp(): Int = {
+       val time = Calendar.getInstance.getTimeInMillis().toInt
+       return time
+   }
+   
+  def timeDifference(t1: Int, t2: Int): Int = {
+      val diff = t2 - t1
+      return diff
+  }
+  
+//   def getDate(): String = {
+//       val date = Calendar.getInstance().getDate().toString
+//       return date
+//   }
     
     
 }

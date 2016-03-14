@@ -7,7 +7,7 @@ import com.support.CORSSupport
 import spray.http.MediaTypes
 import spray.routing.{Route, SimpleRoutingApp}
 
-object GTServer extends App with SimpleRoutingApp with CORSSupport{
+object ProcessConrollerServer extends App with SimpleRoutingApp with CORSSupport{
 
 
   implicit val actorSystem = ActorSystem()
@@ -44,10 +44,32 @@ object GTServer extends App with SimpleRoutingApp with CORSSupport{
       }
   }
   
+  lazy val processController_BG_with_stats = getJson {
+      cors{
+        path("api" / "processControllers" / "processA" / "locationType" / Segment / "locationValue" / Segment/ "withStats") { (queryType, queryValue) =>
+          complete {
+            ProcessControllerService.processController_BG_with_stats(queryType, queryValue)
+          }
+        }
+      }
+  }
+  
+  lazy val processController_BG_Statistics = getJson {
+      cors{
+        path("api" / "processControllers" / "processA" / "getStatistics") {
+          complete {
+            ProcessControllerService.getRuntimeStatistics()
+          }
+        }
+      }
+  }
+  
 
   startServer(interface = "localhost", port = 8083) {
     helloRoute~
-    processController_BG
+    processController_BG~
+    processController_BG_with_stats~
+    processController_BG_Statistics
   }
 
 }
