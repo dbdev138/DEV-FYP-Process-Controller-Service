@@ -64,6 +64,16 @@ object ProcessConrollerServer extends App with SimpleRoutingApp with CORSSupport
       }
   }
   
+//   lazy val storageTest = getJson {
+//       cors{
+//         path("api" / "storageTest") {
+//           complete {
+//             StorageService.getRuntimeStatistics()
+//           }
+//         }
+//       }
+//   }
+  
 
   startServer(interface = "localhost", port = 8083) {
     helloRoute~

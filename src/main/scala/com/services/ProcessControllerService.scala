@@ -5,7 +5,9 @@ import com.support.LoggingSupport
 import com.support.ProcessControllerHelper
 import com.models.RuntimeStats
 
-import java.io.{IOException}
+import com.services.StorageService
+
+import java.io.{IOException, FileWriter, BufferedWriter}
 import scala.io.{Source}
 import java.net.{URL, HttpURLConnection, SocketTimeoutException}
 
@@ -15,6 +17,7 @@ import java.util.Calendar
 import net.liftweb.json.JsonDSL._
 import scala.collection.mutable.ListBuffer
 
+import awscala._, s3._
 
 
 object ProcessControllerService {
@@ -111,6 +114,22 @@ object ProcessControllerService {
             
             val end_gts      = ProcessControllerHelper.timeStamp()
             
+            
+            println("----------------------------------------------------------------------------------------------------------")
+            println("-----> Creating FileLocation Lists")
+            
+            val start_ss     = ProcessControllerHelper.timeStamp()
+            
+            val fileName = "location_"+queryValue+"_accessed_"+ProcessControllerHelper.getDateFileTag()+"_"+ProcessControllerHelper.timeStamp().toString()+".json"
+            val baseUrl = "https://s3-eu-west-1.amazonaws.com/microdg-test/"
+            val loctaion = baseUrl + fileName
+            
+            //Workaround - populate a list with the same filename
+            val listSize = businessNames.length
+            val locations = List.fill(listSize)(loctaion)
+            
+            val end_ss      = ProcessControllerHelper.timeStamp()
+            
             println("----------------------------------------------------------------------------------------------------------")
             println("-----> Combining Lists")
             
@@ -120,9 +139,9 @@ object ProcessControllerService {
             // println(geoCordsListMaster_lat)
             // println(geoCordsListMaster_lng)
             
-            case class DataSet(b_name: String, b_address: String, b_phone: String, b_lat: String, b_lng: String)
-            val min = List(businessNames, businessAddresses, businessPhones, geoCordsListMaster_lat, geoCordsListMaster_lng).map(_.size).min
-            val dataSets = (0 until min) map { i => DataSet(businessNames(i), businessAddresses(i), businessPhones(i), geoCordsListMaster_lat(i), geoCordsListMaster_lng(i)) }
+            case class DataSet(file_location: String, b_name: String, b_address: String, b_phone: String, b_lat: String, b_lng: String)
+            val min = List(locations, businessNames, businessAddresses, businessPhones, geoCordsListMaster_lat, geoCordsListMaster_lng).map(_.size).min
+            val dataSets = (0 until min) map { i => DataSet(locations(i), businessNames(i), businessAddresses(i), businessPhones(i), geoCordsListMaster_lat(i), geoCordsListMaster_lng(i)) }
             
             //println(dataSets)
            
@@ -131,6 +150,9 @@ object ProcessControllerService {
            
             val dataSetsJson = write(dataSets)
             // println(dataSetsJson)
+            
+            //Write to Storage service
+            StorageService.writeObjectToS3(dataSetsJson, fileName)
             
             val end_pc      = ProcessControllerHelper.timeStamp()
             
@@ -141,6 +163,7 @@ object ProcessControllerService {
             val runtime_pc  = ProcessControllerHelper.timeDifference(start_pc, end_pc)
             val runtime_bbds  = ProcessControllerHelper.timeDifference(start_bbds, end_bbds)
             val runtime_gts  = ProcessControllerHelper.timeDifference(start_gts, end_gts)
+            val runtime_ss  = ProcessControllerHelper.timeDifference(start_ss, end_ss)
             
             // println(start_pc)
             // println(end_pc)
@@ -151,7 +174,7 @@ object ProcessControllerService {
             
             
             //Push statistics to stats collection in Models
-            RuntimeStats.stats += com.models.RuntimeStats.RuntimeStats(num_records_returned, runtime_pc, runtime_bbds, runtime_gts)
+            RuntimeStats.stats += com.models.RuntimeStats.RuntimeStats(num_records_returned, runtime_pc, runtime_bbds, runtime_gts, runtime_ss)
             
             return dataSetsJson
             

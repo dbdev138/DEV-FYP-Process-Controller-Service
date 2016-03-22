@@ -28,7 +28,10 @@ libraryDependencies ++= Seq(
      "org.mockito" % "mockito-all" % "1.9.5" % "test",
      //Slick Database
     "com.typesafe.slick" %% "slick" % "3.0.0",
-    "org.slf4j" % "slf4j-nop" % "1.6.4"
+    "org.slf4j" % "slf4j-nop" % "1.6.4", 
+    //AWS
+    "com.github.seratch" %% "awscala" % "0.5.+",
+    "com.amazonaws" % "aws-java-sdk" % "1.10.37"
     )
 
 
@@ -36,6 +39,8 @@ libraryDependencies ++= Seq(
 //libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.3.11"
 
 
+
+fork in run := true
 
 fork in run := true
 

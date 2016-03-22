@@ -6,6 +6,7 @@ import net.liftweb.json._
 import net.liftweb.json.Serialization.write
 import scala.io.{Source}
 import java.util.Calendar
+import java.time.LocalDate
 
 object ProcessControllerHelper {
     
@@ -71,10 +72,12 @@ object ProcessControllerHelper {
       return diff
   }
   
-//   def getDate(): String = {
-//       val date = Calendar.getInstance().getDate().toString
-//       return date
-//   }
+  def getDateFileTag(): String = {
+      val time = LocalDate.now
+      
+      val dateFileTag = time.toString()
+      return dateFileTag
+  }
     
     
 }
