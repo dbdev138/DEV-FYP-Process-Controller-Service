@@ -1,127 +1,133 @@
-New log file opened at Mon Mar 21 23:35:38 GMT 2016 by 8932@DESKTOP-7UG7O8D
-Taking next connection to: 59134
-New client attempting to connect on port: 59135-59134
-  Address = /192.168.99.1:59134
-This client on port 59135 has uuid fb232f4a-b5bf-4140-8f46-87bf4cc9ee9f configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
-Connected Clients: activator-fb232f4a-b5bf-4140-8f46-87bf4cc9ee9f
-Taking next connection to: 59134
+New log file opened at Wed Mar 23 01:30:55 GMT 2016 by 6800@DESKTOP-7UG7O8D
+Taking next connection to: 55308
+New client attempting to connect on port: 55309-55308
+  Address = /192.168.99.1:55308
+This client on port 55309 has uuid 27c9b9d0-cd3c-461b-88ea-fb79bdb1c610 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-27c9b9d0-cd3c-461b-88ea-fb79bdb1c610
+Taking next connection to: 55308
+New client attempting to connect on port: 55310-55308
+  Address = /192.168.99.1:55308
+Handshake exception on socket: 55310
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.net.SocketException: Software caused connection abort: recv failed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.io.BufferedInputStream.fill(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at java.io.DataInputStream.readInt(Unknown Source)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 55308
+New client attempting to connect on port: 55311-55308
+  Address = /192.168.99.1:55308
+This client on port 55311 has uuid 55b65417-54f8-4d38-bf36-8e837c5008f8 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-27c9b9d0-cd3c-461b-88ea-fb79bdb1c610, activator-55b65417-54f8-4d38-bf36-8e837c5008f8
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 59134
+Taking next connection to: 55308
 Checking to see if clients are empty...
 No non-daemon clients connected after 3 min. Shutting down.
 Server socket thread exiting.
 0 clients open, will close them...
 All client sockets have been closed.
-Closing the 8932@DESKTOP-7UG7O8D logs at Tue Mar 22 01:32:38 GMT 2016, goodbye.
+Closing the 6800@DESKTOP-7UG7O8D logs at Wed Mar 23 03:15:19 GMT 2016, goodbye.

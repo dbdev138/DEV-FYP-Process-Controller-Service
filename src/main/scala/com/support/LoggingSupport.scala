@@ -19,6 +19,11 @@ object LoggingSupport {
 	    println("Content being returned is of type: List[Any]: "+content.isInstanceOf[List[Any]])
 	    println("Content being returned is of type: Int: "+content.isInstanceOf[Int])
 	}
+	
+	def logProgress(message: String) : Unit = {
+        println("----------------------------------------------------------------------------------------------------------")
+        println(s"-----> $message")
+	}
     
 }
 

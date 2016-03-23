@@ -5,8 +5,6 @@ import com.support.LoggingSupport
 import com.support.ProcessControllerHelper
 import com.models.RuntimeStats
 
-import com.services.StorageService
-
 import java.io.{IOException, FileWriter, BufferedWriter}
 import scala.io.{Source}
 import java.net.{URL, HttpURLConnection, SocketTimeoutException}
@@ -26,12 +24,9 @@ object ProcessControllerService {
     
         def processController_BG(queryType: String, queryValue: String): String = {
             
-            println("----------------------------------------------------------------------------------------------------------")
-            println("-----> Get BBDS")
-
+            LoggingSupport.logProgress("Get BBDS")
             
             val businessListMasterJson = ProcessControllerHelper.getRouteHandler(queryType, queryValue)
-            // val businessListMasterJson = getRouteHandler("town", "lusk") 
             val businessListMasterJValue = parse(businessListMasterJson)
             
             //Filter values into Lists
@@ -39,8 +34,7 @@ object ProcessControllerService {
             val businessAddresses   =  for { JField("address", JString(address)) <- businessListMasterJValue } yield address
             val businessPhones      =  for { JField("phone", JString(phone)) <- businessListMasterJValue } yield phone
     
-            println("----------------------------------------------------------------------------------------------------------")
-            println("-----> Get GTS")
+            LoggingSupport.logProgress("Get GTS")
             
             def getGeoCords_lat(address: String): String = { RouteHandlerService.processControllerGTS_lat(address) }
             def getGeoCords_lng(address: String): String = { RouteHandlerService.processControllerGTS_lng(address) }
@@ -52,26 +46,15 @@ object ProcessControllerService {
             val geoCordsListMasterJson_lng = for(address <- businessAddresses) yield getGeoCords_lng(address)
             val geoCordsListMaster_lng     = for(lng <- geoCordsListMasterJson_lng) yield stripQuotes(lng)
     
-            println("----------------------------------------------------------------------------------------------------------")
-            println("-----> Combining Lists")
-            
-            // println(businessNames)
-            // println(businessAddresses)
-            // println(businessPhones)
-            // println(geoCordsListMaster_lat)
-            // println(geoCordsListMaster_lng)
+            LoggingSupport.logProgress("Combining Lists")
             
             case class DataSet(b_name: String, b_address: String, b_phone: String, b_lat: String, b_lng: String)
             val min = List(businessNames, businessAddresses, businessPhones, geoCordsListMaster_lat, geoCordsListMaster_lng).map(_.size).min
             val dataSets = (0 until min) map { i => DataSet(businessNames(i), businessAddresses(i), businessPhones(i), geoCordsListMaster_lat(i), geoCordsListMaster_lng(i)) }
             
-            // println(dataSets)
-           
-            println("----------------------------------------------------------------------------------------------------------")
-            println("-----> Build & Return Json Object")
+            LoggingSupport.logProgress("Build & Return Json Object")
            
             val dataSetsJson = write(dataSets)
-            // println(dataSetsJson)
             
             return dataSetsJson
             
@@ -81,8 +64,7 @@ object ProcessControllerService {
         def processController_BG_with_stats(queryType: String, queryValue: String): String = {
             val start_pc    = ProcessControllerHelper.timeStamp()
 
-            println("----------------------------------------------------------------------------------------------------------")
-            println("-----> Get BBDS")
+            LoggingSupport.logProgress("Get BBDS")
 
             val start_bbds    = ProcessControllerHelper.timeStamp()
             
@@ -97,8 +79,7 @@ object ProcessControllerService {
             
             val end_bbds      = ProcessControllerHelper.timeStamp()
             
-            println("----------------------------------------------------------------------------------------------------------")
-            println("-----> Get GTS")
+            LoggingSupport.logProgress("Get GTS")
             
             val start_gts    = ProcessControllerHelper.timeStamp()
             
@@ -114,9 +95,7 @@ object ProcessControllerService {
             
             val end_gts      = ProcessControllerHelper.timeStamp()
             
-            
-            println("----------------------------------------------------------------------------------------------------------")
-            println("-----> Creating FileLocation Lists")
+            LoggingSupport.logProgress("Creating FileLocation Lists")
             
             val start_ss     = ProcessControllerHelper.timeStamp()
             
@@ -130,51 +109,36 @@ object ProcessControllerService {
             
             val end_ss      = ProcessControllerHelper.timeStamp()
             
-            println("----------------------------------------------------------------------------------------------------------")
-            println("-----> Combining Lists")
-            
-            // println(businessNames)
-            // println(businessAddresses)
-            // println(businessPhones)
-            // println(geoCordsListMaster_lat)
-            // println(geoCordsListMaster_lng)
+            LoggingSupport.logProgress("Combining Lists")
             
             case class DataSet(file_location: String, b_name: String, b_address: String, b_phone: String, b_lat: String, b_lng: String)
             val min = List(locations, businessNames, businessAddresses, businessPhones, geoCordsListMaster_lat, geoCordsListMaster_lng).map(_.size).min
             val dataSets = (0 until min) map { i => DataSet(locations(i), businessNames(i), businessAddresses(i), businessPhones(i), geoCordsListMaster_lat(i), geoCordsListMaster_lng(i)) }
             
-            //println(dataSets)
-           
-            println("----------------------------------------------------------------------------------------------------------")
-            println("-----> Build & Return Json Object")
+            LoggingSupport.logProgress("Build & Return JSON Object")
            
             val dataSetsJson = write(dataSets)
-            // println(dataSetsJson)
+            
+            LoggingSupport.logProgress("Storing Object in S3 Bucket")
             
             //Write to Storage service
-            StorageService.writeObjectToS3(dataSetsJson, fileName)
+            ProcessControllerHelper.getService(s"http://localhost:8084/storageServices/s3/processControllers/processA/withObject/"+"""$dataSetsJson"""+"/andDestination/"+fileName)
             
             val end_pc      = ProcessControllerHelper.timeStamp()
             
-            println("----------------------------------------------------------------------------------------------------------")
-            println("-----> Record Stats")
+            LoggingSupport.logProgress("Recording Stats")
             
+            val time_stamp = ProcessControllerHelper.getDateFileTag()
             val num_records_returned = ProcessControllerHelper.recordCount(dataSets)
             val runtime_pc  = ProcessControllerHelper.timeDifference(start_pc, end_pc)
             val runtime_bbds  = ProcessControllerHelper.timeDifference(start_bbds, end_bbds)
             val runtime_gts  = ProcessControllerHelper.timeDifference(start_gts, end_gts)
             val runtime_ss  = ProcessControllerHelper.timeDifference(start_ss, end_ss)
             
-            // println(start_pc)
-            // println(end_pc)
-            // println(num_records_returned)
-            // println(runtime_pc)
-            // println(runtime_bbds)
-            // println(runtime_gts)
-            
-            
-            //Push statistics to stats collection in Models
-            RuntimeStats.stats += com.models.RuntimeStats.RuntimeStats(num_records_returned, runtime_pc, runtime_bbds, runtime_gts, runtime_ss)
+            //Remove head from Runtime Stats Queue
+            RuntimeStats.stats.dequeue
+            //Push statistics to to the queue
+            RuntimeStats.stats.enqueue(com.models.RuntimeStats.RuntimeStats(time_stamp, num_records_returned, runtime_pc, runtime_bbds, runtime_gts, runtime_ss))
             
             return dataSetsJson
             
