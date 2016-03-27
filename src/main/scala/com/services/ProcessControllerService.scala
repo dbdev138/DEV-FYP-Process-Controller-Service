@@ -122,7 +122,7 @@ object ProcessControllerService {
             LoggingSupport.logProgress("Storing Object in S3 Bucket")
             
             //Write to Storage service
-            ProcessControllerHelper.getService(s"http://localhost:8084/storageServices/s3/processControllers/processA/withObject/"+"""$dataSetsJson"""+"/andDestination/"+fileName)
+            //ProcessControllerHelper.getService(s"http://localhost:8084/storageServices/s3/processControllers/processA/withObject/"+"""$dataSetsJson"""+"/andDestination/"+fileName)
             
             val end_pc      = ProcessControllerHelper.timeStamp()
             
@@ -147,6 +147,11 @@ object ProcessControllerService {
         
         def getRuntimeStatistics(): String = {
             val json = write(RuntimeStats.stats)
+            return json
+        }
+        
+        def getSampleStatistics(): String = {
+            val json = write(RuntimeStats.sample_stats)
             return json
         }
         

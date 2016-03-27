@@ -1,5 +1,5 @@
-New log file opened at Wed Mar 23 01:18:58 GMT 2016 by 4260@DESKTOP-7UG7O8D
-jvm 4260@DESKTOP-7UG7O8D
+New log file opened at Fri Mar 25 17:30:38 GMT 2016 by 1588@DESKTOP-7UG7O8D
+jvm 1588@DESKTOP-7UG7O8D
 jvm vmName=Java HotSpot(TM) Client VM vmVendor=Oracle Corporation vmVersion=25.66-b18
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
@@ -27,7 +27,7 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
 [Loading] Done in C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\project, returning: (dev-fyp-process-controller-service-build)
 Loading project definition from C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@c44874, check cycles: false
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@132dbd4, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -64,9 +64,9 @@ Set current project to FYP-Process-Controller-Service (in build file:/C:/Users/p
 > iflast shell
 > server-send-ready-for-request
 > server-handle-next-server-request
-> {file:/C:/Users/pc/dev/fyp/fyp-dev/DEV-FYP-Process-Controller-Service/}dev-fyp-process-controller-service/compile:discoveredMainClasses
-Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@1685e91, check cycles: false
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@51ec96, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -83,34 +83,12 @@ Sources indirectly invalidated by:
 	external source: Set()
 All initially invalidated sources: Set()
 
-Total time: 1 s, completed 23-Mar-2016 01:19:02
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/pc/dev/fyp/fyp-dev/DEV-FYP-Process-Controller-Service/}dev-fyp-process-controller-service/compile:mainClass
-Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@1c6013a, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Total time: 0 s, completed 23-Mar-2016 01:19:02
+Total time: 2 s, completed 25-Mar-2016 17:30:46
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/pc/dev/fyp/fyp-dev/DEV-FYP-Process-Controller-Service/}dev-fyp-process-controller-service/compile:discoveredMainClasses
 Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@5762ae, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@1ccc996, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -127,12 +105,12 @@ Sources indirectly invalidated by:
 	external source: Set()
 All initially invalidated sources: Set()
 
-Total time: 0 s, completed 23-Mar-2016 01:19:03
+Total time: 1 s, completed 25-Mar-2016 17:30:47
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/pc/dev/fyp/fyp-dev/DEV-FYP-Process-Controller-Service/}dev-fyp-process-controller-service/compile:mainClass
 Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@15c4101, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@1f05c43, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -149,12 +127,34 @@ Sources indirectly invalidated by:
 	external source: Set()
 All initially invalidated sources: Set()
 
-Total time: 0 s, completed 23-Mar-2016 01:19:03
+Total time: 1 s, completed 25-Mar-2016 17:30:47
 > server-post-command-cleanup
 > server-handle-next-server-request
-> backgroundRunMain com.server.ProcessConrollerServer
-Evaluating tasks: compile:backgroundRunMain
-Running task... Cancel: sbt.server.ServerTaskCancellation@13c67f8, check cycles: false
+> {file:/C:/Users/pc/dev/fyp/fyp-dev/DEV-FYP-Process-Controller-Service/}dev-fyp-process-controller-service/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@122adcc, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 0 s, completed 25-Mar-2016 17:30:48
+> server-post-command-cleanup
+> server-handle-next-server-request
+> test
+Evaluating tasks: test:test
+Running task... Cancel: sbt.server.ServerTaskCancellation@1740069, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -173,13 +173,781 @@ All initially invalidated sources: Set()
 
 Copy resource mappings: 
 	
-Total time: 0 s, completed 23-Mar-2016 01:19:07
+The com.support.ProcessControllerHelper source file has the following regular definitions changed:
+	getDateFileTag.
+All member reference dependencies will be considered within this context.
+Files invalidated by inheriting from (external) com.support.ProcessControllerHelper: Set(); now invalidating by inheritance (internally).
+Getting direct dependencies of all sources transitively invalidated by inheritance.
+Getting sources that directly depend on (external) com.support.ProcessControllerHelper.
+None of the modified names appears in C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala. This dependency is not being considered for invalidation.
+The com.support.ProcessControllerHelper$ source file has the following regular definitions changed:
+	getDateFileTag.
+All member reference dependencies will be considered within this context.
+Files invalidated by inheriting from (external) com.support.ProcessControllerHelper$: Set(); now invalidating by inheritance (internally).
+Getting direct dependencies of all sources transitively invalidated by inheritance.
+Getting sources that directly depend on (external) com.support.ProcessControllerHelper$.
+None of the modified names appears in C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala. This dependency is not being considered for invalidation.
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala)
+Removed products: Set()
+External API changes: API Changes: Set(NamesChange(com.support.ProcessControllerHelper,ModifiedNames(regularNames = getDateFileTag, implicitNames = )), NamesChange(com.support.ProcessControllerHelper$,ModifiedNames(regularNames = getDateFileTag, implicitNames = )))
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala)
+
+Read from stdout: Compiling 1 Scala source to C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\target\scala-2.11\test-classes...
+Compiling 1 Scala source to C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\target\scala-2.11\test-classes...
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Running cached compiler 1d48da0, interfacing (CompilerInterface) with Scala compiler version 2.11.7
+Calling Scala compiler with arguments  (CompilerInterface):
+	-bootclasspath
+	C:\Program Files (x86)\Java\jre1.8.0_66\lib\resources.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\rt.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\jsse.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\jce.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\charsets.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\jfr.jar;C:\Program Files (x86)\Java\jre1.8.0_66\classes;C:\Users\pc\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.7.jar
+	-classpath
+	C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\target\scala-2.11\test-classes;C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\target\scala-2.11\classes;C:\Users\pc\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-routing_2.11\bundles\spray-routing_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-http_2.11\bundles\spray-http_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-util_2.11\bundles\spray-util_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\org.parboiled\parboiled-scala_2.11\jars\parboiled-scala_2.11-1.1.7.jar;C:\Users\pc\.ivy2\cache\org.parboiled\parboiled-core\jars\parboiled-core-1.1.7.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-httpx_2.11\bundles\spray-httpx_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.3.jar;C:\Users\pc\.ivy2\cache\org.jvnet.mimepull\mimepull\jars\mimepull-1.9.5.jar;C:\Users\pc\.ivy2\cache\com.chuusai\shapeless_2.11\jars\shapeless_2.11-1.2.4.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-client_2.11\bundles\spray-client_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-can_2.11\bundles\spray-can_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-io_2.11\bundles\spray-io_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\org.json4s\json4s-native_2.11\jars\json4s-native_2.11-3.2.10.jar;C:\Users\pc\.ivy2\cache\org.json4s\json4s-core_2.11\jars\json4s-core_2.11-3.2.10.jar;C:\Users\pc\.ivy2\cache\org.json4s\json4s-ast_2.11\jars\json4s-ast_2.11-3.2.10.jar;C:\Users\pc\.ivy2\cache\com.thoughtworks.paranamer\paranamer\jars\paranamer-2.6.jar;C:\Users\pc\.ivy2\cache\org.scala-lang\scalap\jars\scalap-2.11.0.jar;C:\Users\pc\.ivy2\cache\org.scala-lang\scala-compiler\jars\scala-compiler-2.11.0.jar;C:\Users\pc\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\pc\.ivy2\cache\net.liftweb\lift-json_2.10\jars\lift-json_2.10-3.0-M1.jar;C:\Users\pc\.ivy2\cache\com.typesafe.scala-logging\scala-logging-slf4j_2.11\jars\scala-logging-slf4j_2.11-2.1.2.jar;C:\Users\pc\.ivy2\cache\com.typesafe.scala-logging\scala-logging-api_2.11\jars\scala-logging-api_2.11-2.1.2.jar;C:\Users\pc\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.7.jar;C:\Users\pc\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.2.jar;C:\Users\pc\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.2.jar;C:\Users\pc\.ivy2\cache\com.typesafe.slick\slick_2.11\bundles\slick_2.11-3.0.0.jar;C:\Users\pc\.ivy2\cache\org.reactivestreams\reactive-streams\jars\reactive-streams-1.0.0.jar;C:\Users\pc\.ivy2\cache\org.slf4j\slf4j-nop\jars\slf4j-nop-1.6.4.jar;C:\Users\pc\.ivy2\cache\com.github.seratch\awscala_2.11\jars\awscala_2.11-0.5.5.jar;C:\Users\pc\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.3.jar;C:\Users\pc\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.3.6.jar;C:\Users\pc\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.3.3.jar;C:\Users\pc\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.6.jar;C:\Users\pc\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.5.3.jar;C:\Users\pc\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.5.0.jar;C:\Users\pc\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.5.3.jar;C:\Users\pc\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.9.jar;C:\Users\pc\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.8.1.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk\jars\aws-java-sdk-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-support\jars\aws-java-sdk-support-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-core\jars\aws-java-sdk-core-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-simpledb\jars\aws-java-sdk-simpledb-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-simpleworkflow\jars\aws-java-sdk-simpleworkflow-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-storagegateway\jars\aws-java-sdk-storagegateway-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-route53\jars\aws-java-sdk-route53-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-s3\jars\aws-java-sdk-s3-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-kms\jars\aws-java-sdk-kms-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-importexport\jars\aws-java-sdk-importexport-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-sts\jars\aws-java-sdk-sts-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-sqs\jars\aws-java-sdk-sqs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-rds\jars\aws-java-sdk-rds-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-redshift\jars\aws-java-sdk-redshift-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticbeanstalk\jars\aws-java-sdk-elasticbeanstalk-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-glacier\jars\aws-java-sdk-glacier-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-sns\jars\aws-java-sdk-sns-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-iam\jars\aws-java-sdk-iam-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-datapipeline\jars\aws-java-sdk-datapipeline-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticloadbalancing\jars\aws-java-sdk-elasticloadbalancing-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-emr\jars\aws-java-sdk-emr-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticache\jars\aws-java-sdk-elasticache-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elastictranscoder\jars\aws-java-sdk-elastictranscoder-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ec2\jars\aws-java-sdk-ec2-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-dynamodb\jars\aws-java-sdk-dynamodb-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudtrail\jars\aws-java-sdk-cloudtrail-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudwatch\jars\aws-java-sdk-cloudwatch-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-logs\jars\aws-java-sdk-logs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cognitoidentity\jars\aws-java-sdk-cognitoidentity-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cognitosync\jars\aws-java-sdk-cognitosync-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-directconnect\jars\aws-java-sdk-directconnect-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudformation\jars\aws-java-sdk-cloudformation-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudfront\jars\aws-java-sdk-cloudfront-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-kinesis\jars\aws-java-sdk-kinesis-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-opsworks\jars\aws-java-sdk-opsworks-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ses\jars\aws-java-sdk-ses-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-autoscaling\jars\aws-java-sdk-autoscaling-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudsearch\jars\aws-java-sdk-cloudsearch-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudwatchmetrics\jars\aws-java-sdk-cloudwatchmetrics-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-swf-libraries\jars\aws-java-sdk-swf-libraries-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-codedeploy\jars\aws-java-sdk-codedeploy-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-codepipeline\jars\aws-java-sdk-codepipeline-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-config\jars\aws-java-sdk-config-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-lambda\jars\aws-java-sdk-lambda-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ecs\jars\aws-java-sdk-ecs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudhsm\jars\aws-java-sdk-cloudhsm-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ssm\jars\aws-java-sdk-ssm-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-workspaces\jars\aws-java-sdk-workspaces-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-machinelearning\jars\aws-java-sdk-machinelearning-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-directory\jars\aws-java-sdk-directory-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-efs\jars\aws-java-sdk-efs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-codecommit\jars\aws-java-sdk-codecommit-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-devicefarm\jars\aws-java-sdk-devicefarm-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticsearch\jars\aws-java-sdk-elasticsearch-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-waf\jars\aws-java-sdk-waf-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-marketplacecommerceanalytics\jars\aws-java-sdk-marketplacecommerceanalytics-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-inspector\jars\aws-java-sdk-inspector-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-iot\jars\aws-java-sdk-iot-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-api-gateway\jars\aws-java-sdk-api-gateway-1.10.37.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-testkit_2.11\jars\spray-testkit_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\com.typesafe.akka\akka-testkit_2.11\jars\akka-testkit_2.11-2.3.9.jar;C:\Users\pc\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.9.jar;C:\Users\pc\.ivy2\cache\org.scalatest\scalatest_2.11\bundles\scalatest_2.11-2.2.4.jar;C:\Users\pc\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.2.jar;C:\Users\pc\.ivy2\cache\org.mockito\mockito-all\jars\mockito-all-1.9.5.jar
+Read from stdout: C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala:6: imported `ProcessControllerHelper' is permanently hidden by definition of object ProcessControllerHelper in package support
+C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala:6: imported `ProcessControllerHelper' is permanently hidden by definition of object ProcessControllerHelper in package support
+Read from stdout: import com.support.ProcessControllerHelper
+import com.support.ProcessControllerHelper
+Read from stdout: ^
+                   ^
+Read from stdout: one warning found
+one warning found
+Scala compilation took 5.850564311 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	
+Framework implementation 'org.scalacheck.ScalaCheckFramework' not present.
+Framework implementation 'org.specs2.runner.Specs2Framework' not present.
+Framework implementation 'org.specs2.runner.SpecsFramework' not present.
+Framework implementation 'org.specs.runner.SpecsFramework' not present.
+Framework implementation 'com.novocode.junit.JUnitFramework' not present.
+Subclass fingerprints: List((org.scalatest.Suite,false,org.scalatest.tools.Framework$$anon$1@14599ca))
+Annotation fingerprints: List((org.scalatest.WrapWith,false,org.scalatest.tools.Framework$$anon$2@1c91f0e))
+Running TaskDef(com.services.ProcessControllerServiceSpec, org.scalatest.tools.Framework$$anon$1@14599ca, false, [SuiteSelector])
+Running TaskDef(com.support.ProcessControllerHelperSpec, org.scalatest.tools.Framework$$anon$1@14599ca, false, [SuiteSelector])
+Read from stdout: ProcessControllerServiceSpec:
+ProcessControllerServiceSpec:
+Read from stdout: ProcessControllerHelperSpec:
+Read from stdout: Calling the recordCount function on the test Data Set
+Read from stdout: - should produce the integer value 3
+Read from stdout: Calling the Remote Service switch function with the parameters region and Munster
+Read from stdout: - should return content matching the expected JSON provided *** FAILED ***
+Read from stdout: java.net.ConnectException: Connection refused: connect
+Read from stdout: at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+Read from stdout: at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+Read from stdout: at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+Read from stdout: at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+Read from stdout: at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+Read from stdout: at java.net.PlainSocketImpl.connect(Unknown Source)
+Read from stdout: at java.net.SocksSocketImpl.connect(Unknown Source)
+Read from stdout: at java.net.Socket.connect(Unknown Source)
+Read from stdout: at java.net.Socket.connect(Unknown Source)
+Read from stdout: at sun.net.NetworkClient.doConnect(Unknown Source)
+Read from stdout: ...
+Read from stdout: Passing the parameter 115A Sarsfield Park Lucan Co Dublin to the encode url function
+Read from stdout: - should return 115A+Sarsfield+Park+Lucan+Co+Dublin
+Read from stdout: Calling the Remote Service switch function with the parameters gts and 115A Sarsfield Park Lucan Co Dublin
+Read from stdout: - should retrun content matching the expected JSON provided *** FAILED ***
+Read from stdout: java.net.ConnectException: Connection refused: connect
+Read from stdout: at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+Read from stdout: at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+Read from stdout: at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+Read from stdout: at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+Read from stdout: at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+Read from stdout: at java.net.PlainSocketImpl.connect(Unknown Source)
+Read from stdout: at java.net.SocksSocketImpl.connect(Unknown Source)
+Read from stdout: at java.net.Socket.connect(Unknown Source)
+Read from stdout: at java.net.Socket.connect(Unknown Source)
+Read from stdout: at sun.net.NetworkClient.doConnect(Unknown Source)
+Read from stdout: ...
+Read from stdout: Calling the Get Service function with the parameters: http://localhost:8082/geoTaggings/addresses/115A+Sarsfield+Park+Lucan+Co+Dublin
+Read from stdout: - should retrun content matching the expected JSON provided *** FAILED ***
+Read from stdout: java.net.ConnectException: Connection refused: connect
+Read from stdout: at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+Read from stdout: at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+Read from stdout: at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+Read from stdout: at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+Read from stdout: at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+Read from stdout: at java.net.PlainSocketImpl.connect(Unknown Source)
+Read from stdout: at java.net.SocksSocketImpl.connect(Unknown Source)
+Read from stdout: at java.net.Socket.connect(Unknown Source)
+Read from stdout: at java.net.Socket.connect(Unknown Source)
+Read from stdout: at sun.net.NetworkClient.doConnect(Unknown Source)
+Read from stdout: ...
+ProcessControllerHelperSpec:
+Calling the recordCount function on the test Data Set
+- should produce the integer value 3
+Calling the Remote Service switch function with the parameters region and Munster
+- should return content matching the expected JSON provided *** FAILED ***
+  java.net.ConnectException: Connection refused: connect
+  at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+  at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+  at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+  at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+  at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+  at java.net.PlainSocketImpl.connect(Unknown Source)
+  at java.net.SocksSocketImpl.connect(Unknown Source)
+  at java.net.Socket.connect(Unknown Source)
+  at java.net.Socket.connect(Unknown Source)
+  at sun.net.NetworkClient.doConnect(Unknown Source)
+  ...
+Passing the parameter 115A Sarsfield Park Lucan Co Dublin to the encode url function
+- should return 115A+Sarsfield+Park+Lucan+Co+Dublin
+Calling the Remote Service switch function with the parameters gts and 115A Sarsfield Park Lucan Co Dublin
+- should retrun content matching the expected JSON provided *** FAILED ***
+  java.net.ConnectException: Connection refused: connect
+  at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+  at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+  at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+  at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+  at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+  at java.net.PlainSocketImpl.connect(Unknown Source)
+  at java.net.SocksSocketImpl.connect(Unknown Source)
+  at java.net.Socket.connect(Unknown Source)
+  at java.net.Socket.connect(Unknown Source)
+  at sun.net.NetworkClient.doConnect(Unknown Source)
+  ...
+Calling the Get Service function with the parameters: http://localhost:8082/geoTaggings/addresses/115A+Sarsfield+Park+Lucan+Co+Dublin
+- should retrun content matching the expected JSON provided *** FAILED ***
+  java.net.ConnectException: Connection refused: connect
+  at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+  at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+  at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+  at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+  at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+  at java.net.PlainSocketImpl.connect(Unknown Source)
+  at java.net.SocksSocketImpl.connect(Unknown Source)
+  at java.net.Socket.connect(Unknown Source)
+  at java.net.Socket.connect(Unknown Source)
+  at sun.net.NetworkClient.doConnect(Unknown Source)
+  ...
+Read from stdout: Run completed in 3 seconds, 694 milliseconds.
+Read from stdout: Total number of tests run: 5
+Read from stdout: Suites: completed 2, aborted 0
+Read from stdout: Tests: succeeded 2, failed 3, canceled 0, ignored 0, pending 0
+Read from stdout: *** 3 TESTS FAILED ***
+Run completed in 3 seconds, 694 milliseconds.
+Total number of tests run: 5
+Suites: completed 2, aborted 0
+Tests: succeeded 2, failed 3, canceled 0, ignored 0, pending 0
+*** 3 TESTS FAILED ***
+Passed tests:
+	com.services.ProcessControllerServiceSpec
+Read from stdout: Failed tests:
+Failed tests:
+Read from stdout: 	com.support.ProcessControllerHelperSpec
+	com.support.ProcessControllerHelperSpec
+Read from stdout: (test:test) sbt.TestsFailedException: Tests unsuccessful
+(test:test) sbt.TestsFailedException: Tests unsuccessful
+Total time: 13 s, completed 25-Mar-2016 17:31:50
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> test
+Evaluating tasks: test:test
+Running task... Cancel: sbt.server.ServerTaskCancellation@91eb05, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	
+Framework implementation 'org.scalacheck.ScalaCheckFramework' not present.
+Framework implementation 'org.specs2.runner.Specs2Framework' not present.
+Framework implementation 'org.specs2.runner.SpecsFramework' not present.
+Framework implementation 'org.specs.runner.SpecsFramework' not present.
+Framework implementation 'com.novocode.junit.JUnitFramework' not present.
+Subclass fingerprints: List((org.scalatest.Suite,false,org.scalatest.tools.Framework$$anon$1@f6c4fa))
+Annotation fingerprints: List((org.scalatest.WrapWith,false,org.scalatest.tools.Framework$$anon$2@178ec9d))
+Running TaskDef(com.support.ProcessControllerHelperSpec, org.scalatest.tools.Framework$$anon$1@f6c4fa, false, [SuiteSelector])
+Running TaskDef(com.services.ProcessControllerServiceSpec, org.scalatest.tools.Framework$$anon$1@f6c4fa, false, [SuiteSelector])
+Read from stdout: ProcessControllerServiceSpec:
+ProcessControllerServiceSpec:
+[]
+[{"lat":"53.35870269999999","lng":"-6.4438657"}]
+Read from stdout: ProcessControllerHelperSpec:
+Read from stdout: Calling the recordCount function on the test Data Set
+Read from stdout: - should produce the integer value 3
+Read from stdout: Calling the Remote Service switch function with the parameters region and Munster
+Read from stdout: - should return content matching the expected JSON provided *** FAILED ***
+Read from stdout: "[[]]" did not equal "[[{"id":8,"name":"Village Art Gallery","channel":"art","channel_type":"gallery","phone":"+35318492236","address":"83 Strand Street Skerries Co. Dublin","town":"Skerries","county":"Dublin","region":"Munster"}]]" (ProcessControllerlHelperSpec.scala:40)
+Read from stdout: Passing the parameter 115A Sarsfield Park Lucan Co Dublin to the encode url function
+Read from stdout: - should return 115A+Sarsfield+Park+Lucan+Co+Dublin
+Read from stdout: Calling the Remote Service switch function with the parameters gts and 115A Sarsfield Park Lucan Co Dublin
+Read from stdout: - should retrun content matching the expected JSON provided
+Read from stdout: Calling the Get Service function with the parameters: http://localhost:8082/geoTaggings/addresses/115A+Sarsfield+Park+Lucan+Co+Dublin
+Read from stdout: - should retrun content matching the expected JSON provided
+ProcessControllerHelperSpec:
+Calling the recordCount function on the test Data Set
+- should produce the integer value 3
+Calling the Remote Service switch function with the parameters region and Munster
+- should return content matching the expected JSON provided *** FAILED ***
+  "[[]]" did not equal "[[{"id":8,"name":"Village Art Gallery","channel":"art","channel_type":"gallery","phone":"+35318492236","address":"83 Strand Street Skerries Co. Dublin","town":"Skerries","county":"Dublin","region":"Munster"}]]" (ProcessControllerlHelperSpec.scala:40)
+Passing the parameter 115A Sarsfield Park Lucan Co Dublin to the encode url function
+- should return 115A+Sarsfield+Park+Lucan+Co+Dublin
+Calling the Remote Service switch function with the parameters gts and 115A Sarsfield Park Lucan Co Dublin
+- should retrun content matching the expected JSON provided
+Calling the Get Service function with the parameters: http://localhost:8082/geoTaggings/addresses/115A+Sarsfield+Park+Lucan+Co+Dublin
+- should retrun content matching the expected JSON provided
+Read from stdout: Run completed in 1 second, 657 milliseconds.
+Read from stdout: Total number of tests run: 5
+Read from stdout: Suites: completed 2, aborted 0
+Read from stdout: Tests: succeeded 4, failed 1, canceled 0, ignored 0, pending 0
+Read from stdout: *** 1 TEST FAILED ***
+Run completed in 1 second, 657 milliseconds.
+Total number of tests run: 5
+Suites: completed 2, aborted 0
+Tests: succeeded 4, failed 1, canceled 0, ignored 0, pending 0
+*** 1 TEST FAILED ***
+Passed tests:
+	com.services.ProcessControllerServiceSpec
+Read from stdout: Failed tests:
+Failed tests:
+Read from stdout: 	com.support.ProcessControllerHelperSpec
+	com.support.ProcessControllerHelperSpec
+Read from stdout: (test:test) sbt.TestsFailedException: Tests unsuccessful
+(test:test) sbt.TestsFailedException: Tests unsuccessful
+Total time: 2 s, completed 25-Mar-2016 17:32:39
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@1d2a0d, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 0 s, completed 25-Mar-2016 17:38:14
+> server-post-command-cleanup
+> server-handle-next-server-request
+> test
+Evaluating tasks: test:test
+Running task... Cancel: sbt.server.ServerTaskCancellation@19d2caa, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala)
+
+Read from stdout: Compiling 1 Scala source to C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\target\scala-2.11\test-classes...
+Compiling 1 Scala source to C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\target\scala-2.11\test-classes...
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Running cached compiler 1493226, interfacing (CompilerInterface) with Scala compiler version 2.11.7
+Calling Scala compiler with arguments  (CompilerInterface):
+	-bootclasspath
+	C:\Program Files (x86)\Java\jre1.8.0_66\lib\resources.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\rt.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\jsse.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\jce.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\charsets.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\jfr.jar;C:\Program Files (x86)\Java\jre1.8.0_66\classes;C:\Users\pc\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.7.jar
+	-classpath
+	C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\target\scala-2.11\test-classes;C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\target\scala-2.11\classes;C:\Users\pc\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-routing_2.11\bundles\spray-routing_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-http_2.11\bundles\spray-http_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-util_2.11\bundles\spray-util_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\org.parboiled\parboiled-scala_2.11\jars\parboiled-scala_2.11-1.1.7.jar;C:\Users\pc\.ivy2\cache\org.parboiled\parboiled-core\jars\parboiled-core-1.1.7.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-httpx_2.11\bundles\spray-httpx_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.3.jar;C:\Users\pc\.ivy2\cache\org.jvnet.mimepull\mimepull\jars\mimepull-1.9.5.jar;C:\Users\pc\.ivy2\cache\com.chuusai\shapeless_2.11\jars\shapeless_2.11-1.2.4.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-client_2.11\bundles\spray-client_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-can_2.11\bundles\spray-can_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-io_2.11\bundles\spray-io_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\org.json4s\json4s-native_2.11\jars\json4s-native_2.11-3.2.10.jar;C:\Users\pc\.ivy2\cache\org.json4s\json4s-core_2.11\jars\json4s-core_2.11-3.2.10.jar;C:\Users\pc\.ivy2\cache\org.json4s\json4s-ast_2.11\jars\json4s-ast_2.11-3.2.10.jar;C:\Users\pc\.ivy2\cache\com.thoughtworks.paranamer\paranamer\jars\paranamer-2.6.jar;C:\Users\pc\.ivy2\cache\org.scala-lang\scalap\jars\scalap-2.11.0.jar;C:\Users\pc\.ivy2\cache\org.scala-lang\scala-compiler\jars\scala-compiler-2.11.0.jar;C:\Users\pc\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\pc\.ivy2\cache\net.liftweb\lift-json_2.10\jars\lift-json_2.10-3.0-M1.jar;C:\Users\pc\.ivy2\cache\com.typesafe.scala-logging\scala-logging-slf4j_2.11\jars\scala-logging-slf4j_2.11-2.1.2.jar;C:\Users\pc\.ivy2\cache\com.typesafe.scala-logging\scala-logging-api_2.11\jars\scala-logging-api_2.11-2.1.2.jar;C:\Users\pc\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.7.jar;C:\Users\pc\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.2.jar;C:\Users\pc\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.2.jar;C:\Users\pc\.ivy2\cache\com.typesafe.slick\slick_2.11\bundles\slick_2.11-3.0.0.jar;C:\Users\pc\.ivy2\cache\org.reactivestreams\reactive-streams\jars\reactive-streams-1.0.0.jar;C:\Users\pc\.ivy2\cache\org.slf4j\slf4j-nop\jars\slf4j-nop-1.6.4.jar;C:\Users\pc\.ivy2\cache\com.github.seratch\awscala_2.11\jars\awscala_2.11-0.5.5.jar;C:\Users\pc\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.3.jar;C:\Users\pc\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.3.6.jar;C:\Users\pc\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.3.3.jar;C:\Users\pc\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.6.jar;C:\Users\pc\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.5.3.jar;C:\Users\pc\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.5.0.jar;C:\Users\pc\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.5.3.jar;C:\Users\pc\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.9.jar;C:\Users\pc\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.8.1.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk\jars\aws-java-sdk-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-support\jars\aws-java-sdk-support-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-core\jars\aws-java-sdk-core-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-simpledb\jars\aws-java-sdk-simpledb-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-simpleworkflow\jars\aws-java-sdk-simpleworkflow-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-storagegateway\jars\aws-java-sdk-storagegateway-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-route53\jars\aws-java-sdk-route53-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-s3\jars\aws-java-sdk-s3-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-kms\jars\aws-java-sdk-kms-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-importexport\jars\aws-java-sdk-importexport-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-sts\jars\aws-java-sdk-sts-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-sqs\jars\aws-java-sdk-sqs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-rds\jars\aws-java-sdk-rds-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-redshift\jars\aws-java-sdk-redshift-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticbeanstalk\jars\aws-java-sdk-elasticbeanstalk-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-glacier\jars\aws-java-sdk-glacier-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-sns\jars\aws-java-sdk-sns-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-iam\jars\aws-java-sdk-iam-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-datapipeline\jars\aws-java-sdk-datapipeline-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticloadbalancing\jars\aws-java-sdk-elasticloadbalancing-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-emr\jars\aws-java-sdk-emr-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticache\jars\aws-java-sdk-elasticache-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elastictranscoder\jars\aws-java-sdk-elastictranscoder-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ec2\jars\aws-java-sdk-ec2-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-dynamodb\jars\aws-java-sdk-dynamodb-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudtrail\jars\aws-java-sdk-cloudtrail-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudwatch\jars\aws-java-sdk-cloudwatch-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-logs\jars\aws-java-sdk-logs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cognitoidentity\jars\aws-java-sdk-cognitoidentity-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cognitosync\jars\aws-java-sdk-cognitosync-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-directconnect\jars\aws-java-sdk-directconnect-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudformation\jars\aws-java-sdk-cloudformation-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudfront\jars\aws-java-sdk-cloudfront-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-kinesis\jars\aws-java-sdk-kinesis-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-opsworks\jars\aws-java-sdk-opsworks-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ses\jars\aws-java-sdk-ses-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-autoscaling\jars\aws-java-sdk-autoscaling-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudsearch\jars\aws-java-sdk-cloudsearch-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudwatchmetrics\jars\aws-java-sdk-cloudwatchmetrics-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-swf-libraries\jars\aws-java-sdk-swf-libraries-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-codedeploy\jars\aws-java-sdk-codedeploy-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-codepipeline\jars\aws-java-sdk-codepipeline-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-config\jars\aws-java-sdk-config-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-lambda\jars\aws-java-sdk-lambda-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ecs\jars\aws-java-sdk-ecs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudhsm\jars\aws-java-sdk-cloudhsm-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ssm\jars\aws-java-sdk-ssm-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-workspaces\jars\aws-java-sdk-workspaces-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-machinelearning\jars\aws-java-sdk-machinelearning-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-directory\jars\aws-java-sdk-directory-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-efs\jars\aws-java-sdk-efs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-codecommit\jars\aws-java-sdk-codecommit-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-devicefarm\jars\aws-java-sdk-devicefarm-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticsearch\jars\aws-java-sdk-elasticsearch-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-waf\jars\aws-java-sdk-waf-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-marketplacecommerceanalytics\jars\aws-java-sdk-marketplacecommerceanalytics-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-inspector\jars\aws-java-sdk-inspector-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-iot\jars\aws-java-sdk-iot-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-api-gateway\jars\aws-java-sdk-api-gateway-1.10.37.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-testkit_2.11\jars\spray-testkit_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\com.typesafe.akka\akka-testkit_2.11\jars\akka-testkit_2.11-2.3.9.jar;C:\Users\pc\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.9.jar;C:\Users\pc\.ivy2\cache\org.scalatest\scalatest_2.11\bundles\scalatest_2.11-2.2.4.jar;C:\Users\pc\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.2.jar;C:\Users\pc\.ivy2\cache\org.mockito\mockito-all\jars\mockito-all-1.9.5.jar
+Read from stdout: C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala:6: imported `ProcessControllerHelper' is permanently hidden by definition of object ProcessControllerHelper in package support
+C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala:6: imported `ProcessControllerHelper' is permanently hidden by definition of object ProcessControllerHelper in package support
+Read from stdout: import com.support.ProcessControllerHelper
+import com.support.ProcessControllerHelper
+Read from stdout: ^
+                   ^
+Read from stdout: C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala:31: Reference to uninitialized value sampleParam1
+C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala:31: Reference to uninitialized value sampleParam1
+Read from stdout: s"Calling the Remote Service switch function with the parameters $sampleParam1 and $sampleParam2" should "return content matching the expected JSON provided" in {
+    s"Calling the Remote Service switch function with the parameters $sampleParam1 and $sampleParam2" should "return content matching the expected JSON provided" in {
+Read from stdout: ^
+                                                                      ^
+Read from stdout: C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala:31: Reference to uninitialized value sampleParam2
+C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala:31: Reference to uninitialized value sampleParam2
+Read from stdout: s"Calling the Remote Service switch function with the parameters $sampleParam1 and $sampleParam2" should "return content matching the expected JSON provided" in {
+    s"Calling the Remote Service switch function with the parameters $sampleParam1 and $sampleParam2" should "return content matching the expected JSON provided" in {
+Read from stdout: ^
+                                                                                        ^
+Read from stdout: C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala:35: Reference to uninitialized value sampleParam4
+C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala:35: Reference to uninitialized value sampleParam4
+Read from stdout: s"Passing the parameter $sampleParam4 to the encode url function" should s"return $encodedUrl" in {
+    s"Passing the parameter $sampleParam4 to the encode url function" should s"return $encodedUrl" in {
+Read from stdout: ^
+                             ^
+Read from stdout: C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala:35: Reference to uninitialized value encodedUrl
+C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala:35: Reference to uninitialized value encodedUrl
+Read from stdout: s"Passing the parameter $sampleParam4 to the encode url function" should s"return $encodedUrl" in {
+    s"Passing the parameter $sampleParam4 to the encode url function" should s"return $encodedUrl" in {
+Read from stdout: ^
+                                                                                       ^
+Read from stdout: C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala:39: Reference to uninitialized value sampleParam3
+C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala:39: Reference to uninitialized value sampleParam3
+Read from stdout: s"Calling the Remote Service switch function with the parameters $sampleParam3 and $sampleParam4" should "retrun content matching the expected JSON provided" in {
+    s"Calling the Remote Service switch function with the parameters $sampleParam3 and $sampleParam4" should "retrun content matching the expected JSON provided" in {
+Read from stdout: ^
+                                                                      ^
+Read from stdout: C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala:39: Reference to uninitialized value sampleParam4
+C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala:39: Reference to uninitialized value sampleParam4
+Read from stdout: s"Calling the Remote Service switch function with the parameters $sampleParam3 and $sampleParam4" should "retrun content matching the expected JSON provided" in {
+    s"Calling the Remote Service switch function with the parameters $sampleParam3 and $sampleParam4" should "retrun content matching the expected JSON provided" in {
+Read from stdout: ^
+                                                                                        ^
+Read from stdout: C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala:43: Reference to uninitialized value sampleParam5
+C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala:43: Reference to uninitialized value sampleParam5
+Read from stdout: s"Calling the Get Service function with the parameters: $sampleParam5" should "retrun content matching the expected JSON provided" in {
+    s"Calling the Get Service function with the parameters: $sampleParam5" should "retrun content matching the expected JSON provided" in {
+Read from stdout: ^
+                                                             ^
+Read from stdout: 8 warnings found
+8 warnings found
+Scala compilation took 1.583226027 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	
+Framework implementation 'org.scalacheck.ScalaCheckFramework' not present.
+Framework implementation 'org.specs2.runner.Specs2Framework' not present.
+Framework implementation 'org.specs2.runner.SpecsFramework' not present.
+Framework implementation 'org.specs.runner.SpecsFramework' not present.
+Framework implementation 'com.novocode.junit.JUnitFramework' not present.
+Subclass fingerprints: List((org.scalatest.Suite,false,org.scalatest.tools.Framework$$anon$1@10cce2d))
+Annotation fingerprints: List((org.scalatest.WrapWith,false,org.scalatest.tools.Framework$$anon$2@3d4cc4))
+Running TaskDef(com.support.ProcessControllerHelperSpec, org.scalatest.tools.Framework$$anon$1@10cce2d, false, [SuiteSelector])
+Running TaskDef(com.services.ProcessControllerServiceSpec, org.scalatest.tools.Framework$$anon$1@10cce2d, false, [SuiteSelector])
+Read from stdout: ProcessControllerServiceSpec:
+ProcessControllerServiceSpec:
+No such Resource
+[{"lat":"53.35870269999999","lng":"-6.4438657"}]
+Read from stdout: ProcessControllerHelperSpec:
+Read from stdout: Calling the recordCount function on the test Data Set
+Read from stdout: - should produce the integer value 3
+Read from stdout: Calling the Remote Service switch function with the parameters null and null
+Read from stdout: - should return content matching the expected JSON provided *** FAILED ***
+Read from stdout: "[No such Resource]" did not equal "[
+Read from stdout: [
+Read from stdout: {
+Read from stdout: "id": 12,
+Read from stdout: "name": "Village Art Gallery",
+Read from stdout: "channel": "art",
+Read from stdout: "channel_type": "gallery",
+Read from stdout: "phone": "+35318492236",
+Read from stdout: "address": "83 Strand Street Skerries Co. Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 13,
+Read from stdout: "name": "Carrolls Pierhouse Hotel Restaurant",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "restaurant",
+Read from stdout: "phone": "+35318491033",
+Read from stdout: "address": "Harbour Road Skerries Co. Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 14,
+Read from stdout: "name": "Central Cafe",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "cafe",
+Read from stdout: "phone": "+35318491374",
+Read from stdout: "address": "75 Strand Street Skerries Co.Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 15,
+Read from stdout: "name": "O'Sheas Bar & Restaurant",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "pub",
+Read from stdout: "phone": "+35318491374",
+Read from stdout: "address": "17 New Street Skerries Co Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 16,
+Read from stdout: "name": "Olive",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "cafe",
+Read from stdout: "phone": "+35318490310",
+Read from stdout: "address": "86A Strand Street Skerries Co. Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 17,
+Read from stdout: "name": "Parachute Cafe",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "cafe",
+Read from stdout: "phone": "+35318492322",
+Read from stdout: "address": "47 Thomas Hand Street Skerries Co. Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 18,
+Read from stdout: "name": "Pasta Pizza",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "restaurant",
+Read from stdout: "phone": "+35318492724",
+Read from stdout: "address": "54 Strand Street Skerries Co. Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 19,
+Read from stdout: "name": "Pheonix Chinese Take Away",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "takeaway",
+Read from stdout: "phone": "+35318490848",
+Read from stdout: "address": "South Strand Skerries Co Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 20,
+Read from stdout: "name": "Russelle Restauran",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "restaurant",
+Read from stdout: "phone": "+35318492450",
+Read from stdout: "address": "24 Strand Street Skerries Co. Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 21,
+Read from stdout: "name": "The Cottage Bistro",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "restaurant",
+Read from stdout: "phone": "+35318492450",
+Read from stdout: "address": "17 New Street Skerries Co. Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 22,
+Read from stdout: "name": "The Lifeboat Restaurant",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "restaurant",
+Read from stdout: "phone": "+35318490109",
+Read from stdout: "address": "Harbour Road Skerries Co Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: }
+Read from stdout: ]
+Read from stdout: ]" (ProcessControllerlHelperSpec.scala:32)
+Read from stdout: Passing the parameter null to the encode url function
+Read from stdout: - should return null
+Read from stdout: Calling the Remote Service switch function with the parameters null and null
+Read from stdout: - should retrun content matching the expected JSON provided
+Read from stdout: Calling the Get Service function with the parameters: null
+Read from stdout: - should retrun content matching the expected JSON provided
+ProcessControllerHelperSpec:
+Calling the recordCount function on the test Data Set
+- should produce the integer value 3
+Calling the Remote Service switch function with the parameters null and null
+- should return content matching the expected JSON provided *** FAILED ***
+  "[No such Resource]" did not equal "[
+      [
+    {
+      "id": 12,
+      "name": "Village Art Gallery",
+      "channel": "art",
+      "channel_type": "gallery",
+      "phone": "+35318492236",
+      "address": "83 Strand Street Skerries Co. Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 13,
+      "name": "Carrolls Pierhouse Hotel Restaurant",
+      "channel": "f&b",
+      "channel_type": "restaurant",
+      "phone": "+35318491033",
+      "address": "Harbour Road Skerries Co. Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 14,
+      "name": "Central Cafe",
+      "channel": "f&b",
+      "channel_type": "cafe",
+      "phone": "+35318491374",
+      "address": "75 Strand Street Skerries Co.Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 15,
+      "name": "O'Sheas Bar & Restaurant",
+      "channel": "f&b",
+      "channel_type": "pub",
+      "phone": "+35318491374",
+      "address": "17 New Street Skerries Co Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 16,
+      "name": "Olive",
+      "channel": "f&b",
+      "channel_type": "cafe",
+      "phone": "+35318490310",
+      "address": "86A Strand Street Skerries Co. Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 17,
+      "name": "Parachute Cafe",
+      "channel": "f&b",
+      "channel_type": "cafe",
+      "phone": "+35318492322",
+      "address": "47 Thomas Hand Street Skerries Co. Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 18,
+      "name": "Pasta Pizza",
+      "channel": "f&b",
+      "channel_type": "restaurant",
+      "phone": "+35318492724",
+      "address": "54 Strand Street Skerries Co. Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 19,
+      "name": "Pheonix Chinese Take Away",
+      "channel": "f&b",
+      "channel_type": "takeaway",
+      "phone": "+35318490848",
+      "address": "South Strand Skerries Co Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 20,
+      "name": "Russelle Restauran",
+      "channel": "f&b",
+      "channel_type": "restaurant",
+      "phone": "+35318492450",
+      "address": "24 Strand Street Skerries Co. Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 21,
+      "name": "The Cottage Bistro",
+      "channel": "f&b",
+      "channel_type": "restaurant",
+      "phone": "+35318492450",
+      "address": "17 New Street Skerries Co. Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 22,
+      "name": "The Lifeboat Restaurant",
+      "channel": "f&b",
+      "channel_type": "restaurant",
+      "phone": "+35318490109",
+      "address": "Harbour Road Skerries Co Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    }
+  ]
+      ]" (ProcessControllerlHelperSpec.scala:32)
+Passing the parameter null to the encode url function
+- should return null
+Calling the Remote Service switch function with the parameters null and null
+- should retrun content matching the expected JSON provided
+Calling the Get Service function with the parameters: null
+- should retrun content matching the expected JSON provided
+Read from stdout: Run completed in 686 milliseconds.
+Read from stdout: Total number of tests run: 5
+Read from stdout: Suites: completed 2, aborted 0
+Read from stdout: Tests: succeeded 4, failed 1, canceled 0, ignored 0, pending 0
+Read from stdout: *** 1 TEST FAILED ***
+Run completed in 686 milliseconds.
+Total number of tests run: 5
+Suites: completed 2, aborted 0
+Tests: succeeded 4, failed 1, canceled 0, ignored 0, pending 0
+*** 1 TEST FAILED ***
+Passed tests:
+	com.services.ProcessControllerServiceSpec
+Read from stdout: Failed tests:
+Failed tests:
+Read from stdout: 	com.support.ProcessControllerHelperSpec
+	com.support.ProcessControllerHelperSpec
+Read from stdout: (test:test) sbt.TestsFailedException: Tests unsuccessful
+(test:test) sbt.TestsFailedException: Tests unsuccessful
+Total time: 3 s, completed 25-Mar-2016 17:38:30
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@1a077f3, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 1 s, completed 25-Mar-2016 17:40:30
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRunMain com.server.ProcessConrollerServer
+Evaluating tasks: compile:backgroundRunMain
+Running task... Cancel: sbt.server.ServerTaskCancellation@196600d, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	
+Total time: 0 s, completed 25-Mar-2016 17:40:51
 > server-post-command-cleanup
 > server-handle-next-server-request
 > jobStop 1
 Evaluating tasks: *:jobStop
-Running task... Cancel: sbt.server.ServerTaskCancellation@2ea3cf, check cycles: false
-Total time: 0 s, completed 23-Mar-2016 01:20:16
+Running task... Cancel: sbt.server.ServerTaskCancellation@1223215, check cycles: false
+Total time: 0 s, completed 25-Mar-2016 17:40:54
 > server-post-command-cleanup
 > server-handle-next-server-request
 Exception in thread "sbt-bg-threads-1" java.lang.RuntimeException: Nonzero exit code returned from runner: 1
@@ -196,9 +964,9 @@ Exception in thread "sbt-bg-threads-1" java.lang.RuntimeException: Nonzero exit 
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-> backgroundRunMain com.server.ProcessConrollerServer
-Evaluating tasks: compile:backgroundRunMain
-Running task... Cancel: sbt.server.ServerTaskCancellation@1bf7155, check cycles: false
+> test
+Evaluating tasks: test:test
+Running task... Cancel: sbt.server.ServerTaskCancellation@7e1c88, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -217,104 +985,778 @@ All initially invalidated sources: Set()
 
 Copy resource mappings: 
 	
-Total time: 0 s, completed 23-Mar-2016 01:21:26
-> server-post-command-cleanup
-> server-handle-next-server-request
-> compile
-Evaluating tasks: compile:compile
-Running task... Cancel: sbt.server.ServerTaskCancellation@166feec, check cycles: false
 
 Initial source changes: 
 	removed:Set()
 	added: Set()
-	modified: Set(C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\main\scala\com\services\ProcessControllerService.scala)
+	modified: Set(C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala)
 Removed products: Set()
 External API changes: API Changes: Set()
 Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\main\scala\com\services\ProcessControllerService.scala)
+Initial directly invalidated sources: Set(C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala)
 
 Sources indirectly invalidated by:
 	product: Set()
 	binary dep: Set()
 	external source: Set()
-All initially invalidated sources: Set(C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\main\scala\com\services\ProcessControllerService.scala)
+All initially invalidated sources: Set(C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala)
 
-Read from stdout: Compiling 1 Scala source to C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\target\scala-2.11\classes...
-Compiling 1 Scala source to C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\target\scala-2.11\classes...
+Read from stdout: Compiling 1 Scala source to C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\target\scala-2.11\test-classes...
+Compiling 1 Scala source to C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\target\scala-2.11\test-classes...
 Getting compiler-interface from component compiler for Scala 2.11.7
 Other repositories:
 Default repositories:
 Getting compiler-interface from component compiler for Scala 2.11.7
 Other repositories:
 Default repositories:
-Running cached compiler 1f35aee, interfacing (CompilerInterface) with Scala compiler version 2.11.7
+Running cached compiler c12506, interfacing (CompilerInterface) with Scala compiler version 2.11.7
 Calling Scala compiler with arguments  (CompilerInterface):
 	-bootclasspath
 	C:\Program Files (x86)\Java\jre1.8.0_66\lib\resources.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\rt.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\jsse.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\jce.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\charsets.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\jfr.jar;C:\Program Files (x86)\Java\jre1.8.0_66\classes;C:\Users\pc\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.7.jar
 	-classpath
-	C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\target\scala-2.11\classes;C:\Users\pc\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.6.jar;C:\Users\pc\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-routing_2.11\bundles\spray-routing_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-http_2.11\bundles\spray-http_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-util_2.11\bundles\spray-util_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\org.parboiled\parboiled-scala_2.11\jars\parboiled-scala_2.11-1.1.7.jar;C:\Users\pc\.ivy2\cache\org.parboiled\parboiled-core\jars\parboiled-core-1.1.7.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-httpx_2.11\bundles\spray-httpx_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.3.jar;C:\Users\pc\.ivy2\cache\org.jvnet.mimepull\mimepull\jars\mimepull-1.9.5.jar;C:\Users\pc\.ivy2\cache\com.chuusai\shapeless_2.11\jars\shapeless_2.11-1.2.4.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-client_2.11\bundles\spray-client_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-can_2.11\bundles\spray-can_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-io_2.11\bundles\spray-io_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\org.json4s\json4s-native_2.11\jars\json4s-native_2.11-3.2.10.jar;C:\Users\pc\.ivy2\cache\org.json4s\json4s-core_2.11\jars\json4s-core_2.11-3.2.10.jar;C:\Users\pc\.ivy2\cache\org.json4s\json4s-ast_2.11\jars\json4s-ast_2.11-3.2.10.jar;C:\Users\pc\.ivy2\cache\com.thoughtworks.paranamer\paranamer\jars\paranamer-2.6.jar;C:\Users\pc\.ivy2\cache\org.scala-lang\scalap\jars\scalap-2.11.0.jar;C:\Users\pc\.ivy2\cache\org.scala-lang\scala-compiler\jars\scala-compiler-2.11.0.jar;C:\Users\pc\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.0.jar;C:\Users\pc\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\pc\.ivy2\cache\net.liftweb\lift-json_2.10\jars\lift-json_2.10-3.0-M1.jar;C:\Users\pc\.ivy2\cache\com.typesafe.scala-logging\scala-logging-slf4j_2.11\jars\scala-logging-slf4j_2.11-2.1.2.jar;C:\Users\pc\.ivy2\cache\com.typesafe.scala-logging\scala-logging-api_2.11\jars\scala-logging-api_2.11-2.1.2.jar;C:\Users\pc\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.7.jar;C:\Users\pc\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.2.jar;C:\Users\pc\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.2.jar;C:\Users\pc\.ivy2\cache\com.typesafe.slick\slick_2.11\bundles\slick_2.11-3.0.0.jar;C:\Users\pc\.ivy2\cache\org.reactivestreams\reactive-streams\jars\reactive-streams-1.0.0.jar;C:\Users\pc\.ivy2\cache\org.slf4j\slf4j-nop\jars\slf4j-nop-1.6.4.jar;C:\Users\pc\.ivy2\cache\com.github.seratch\awscala_2.11\jars\awscala_2.11-0.5.5.jar;C:\Users\pc\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.3.jar;C:\Users\pc\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.3.6.jar;C:\Users\pc\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.3.3.jar;C:\Users\pc\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.6.jar;C:\Users\pc\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.5.3.jar;C:\Users\pc\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.5.0.jar;C:\Users\pc\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.5.3.jar;C:\Users\pc\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.9.jar;C:\Users\pc\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.8.1.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk\jars\aws-java-sdk-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-support\jars\aws-java-sdk-support-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-core\jars\aws-java-sdk-core-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-simpledb\jars\aws-java-sdk-simpledb-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-simpleworkflow\jars\aws-java-sdk-simpleworkflow-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-storagegateway\jars\aws-java-sdk-storagegateway-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-route53\jars\aws-java-sdk-route53-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-s3\jars\aws-java-sdk-s3-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-kms\jars\aws-java-sdk-kms-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-importexport\jars\aws-java-sdk-importexport-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-sts\jars\aws-java-sdk-sts-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-sqs\jars\aws-java-sdk-sqs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-rds\jars\aws-java-sdk-rds-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-redshift\jars\aws-java-sdk-redshift-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticbeanstalk\jars\aws-java-sdk-elasticbeanstalk-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-glacier\jars\aws-java-sdk-glacier-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-sns\jars\aws-java-sdk-sns-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-iam\jars\aws-java-sdk-iam-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-datapipeline\jars\aws-java-sdk-datapipeline-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticloadbalancing\jars\aws-java-sdk-elasticloadbalancing-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-emr\jars\aws-java-sdk-emr-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticache\jars\aws-java-sdk-elasticache-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elastictranscoder\jars\aws-java-sdk-elastictranscoder-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ec2\jars\aws-java-sdk-ec2-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-dynamodb\jars\aws-java-sdk-dynamodb-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudtrail\jars\aws-java-sdk-cloudtrail-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudwatch\jars\aws-java-sdk-cloudwatch-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-logs\jars\aws-java-sdk-logs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cognitoidentity\jars\aws-java-sdk-cognitoidentity-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cognitosync\jars\aws-java-sdk-cognitosync-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-directconnect\jars\aws-java-sdk-directconnect-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudformation\jars\aws-java-sdk-cloudformation-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudfront\jars\aws-java-sdk-cloudfront-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-kinesis\jars\aws-java-sdk-kinesis-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-opsworks\jars\aws-java-sdk-opsworks-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ses\jars\aws-java-sdk-ses-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-autoscaling\jars\aws-java-sdk-autoscaling-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudsearch\jars\aws-java-sdk-cloudsearch-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudwatchmetrics\jars\aws-java-sdk-cloudwatchmetrics-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-swf-libraries\jars\aws-java-sdk-swf-libraries-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-codedeploy\jars\aws-java-sdk-codedeploy-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-codepipeline\jars\aws-java-sdk-codepipeline-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-config\jars\aws-java-sdk-config-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-lambda\jars\aws-java-sdk-lambda-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ecs\jars\aws-java-sdk-ecs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudhsm\jars\aws-java-sdk-cloudhsm-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ssm\jars\aws-java-sdk-ssm-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-workspaces\jars\aws-java-sdk-workspaces-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-machinelearning\jars\aws-java-sdk-machinelearning-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-directory\jars\aws-java-sdk-directory-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-efs\jars\aws-java-sdk-efs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-codecommit\jars\aws-java-sdk-codecommit-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-devicefarm\jars\aws-java-sdk-devicefarm-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticsearch\jars\aws-java-sdk-elasticsearch-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-waf\jars\aws-java-sdk-waf-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-marketplacecommerceanalytics\jars\aws-java-sdk-marketplacecommerceanalytics-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-inspector\jars\aws-java-sdk-inspector-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-iot\jars\aws-java-sdk-iot-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-api-gateway\jars\aws-java-sdk-api-gateway-1.10.37.jar
-Read from stdout: C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\main\scala\com\services\ProcessControllerService.scala:141: value += is not a member of scala.collection.immutable.Queue[com.models.RuntimeStats.RuntimeStats]
-C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\main\scala\com\services\ProcessControllerService.scala:141: value += is not a member of scala.collection.immutable.Queue[com.models.RuntimeStats.RuntimeStats]
-Read from stdout: RuntimeStats.stats += com.models.RuntimeStats.RuntimeStats(time_stamp, num_records_returned, runtime_pc, runtime_bbds, runtime_gts, runtime_ss)
-            RuntimeStats.stats += com.models.RuntimeStats.RuntimeStats(time_stamp, num_records_returned, runtime_pc, runtime_bbds, runtime_gts, runtime_ss)
+	C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\target\scala-2.11\test-classes;C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\target\scala-2.11\classes;C:\Users\pc\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-routing_2.11\bundles\spray-routing_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-http_2.11\bundles\spray-http_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-util_2.11\bundles\spray-util_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\org.parboiled\parboiled-scala_2.11\jars\parboiled-scala_2.11-1.1.7.jar;C:\Users\pc\.ivy2\cache\org.parboiled\parboiled-core\jars\parboiled-core-1.1.7.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-httpx_2.11\bundles\spray-httpx_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.3.jar;C:\Users\pc\.ivy2\cache\org.jvnet.mimepull\mimepull\jars\mimepull-1.9.5.jar;C:\Users\pc\.ivy2\cache\com.chuusai\shapeless_2.11\jars\shapeless_2.11-1.2.4.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-client_2.11\bundles\spray-client_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-can_2.11\bundles\spray-can_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-io_2.11\bundles\spray-io_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\org.json4s\json4s-native_2.11\jars\json4s-native_2.11-3.2.10.jar;C:\Users\pc\.ivy2\cache\org.json4s\json4s-core_2.11\jars\json4s-core_2.11-3.2.10.jar;C:\Users\pc\.ivy2\cache\org.json4s\json4s-ast_2.11\jars\json4s-ast_2.11-3.2.10.jar;C:\Users\pc\.ivy2\cache\com.thoughtworks.paranamer\paranamer\jars\paranamer-2.6.jar;C:\Users\pc\.ivy2\cache\org.scala-lang\scalap\jars\scalap-2.11.0.jar;C:\Users\pc\.ivy2\cache\org.scala-lang\scala-compiler\jars\scala-compiler-2.11.0.jar;C:\Users\pc\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\pc\.ivy2\cache\net.liftweb\lift-json_2.10\jars\lift-json_2.10-3.0-M1.jar;C:\Users\pc\.ivy2\cache\com.typesafe.scala-logging\scala-logging-slf4j_2.11\jars\scala-logging-slf4j_2.11-2.1.2.jar;C:\Users\pc\.ivy2\cache\com.typesafe.scala-logging\scala-logging-api_2.11\jars\scala-logging-api_2.11-2.1.2.jar;C:\Users\pc\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.7.jar;C:\Users\pc\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.2.jar;C:\Users\pc\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.2.jar;C:\Users\pc\.ivy2\cache\com.typesafe.slick\slick_2.11\bundles\slick_2.11-3.0.0.jar;C:\Users\pc\.ivy2\cache\org.reactivestreams\reactive-streams\jars\reactive-streams-1.0.0.jar;C:\Users\pc\.ivy2\cache\org.slf4j\slf4j-nop\jars\slf4j-nop-1.6.4.jar;C:\Users\pc\.ivy2\cache\com.github.seratch\awscala_2.11\jars\awscala_2.11-0.5.5.jar;C:\Users\pc\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.3.jar;C:\Users\pc\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.3.6.jar;C:\Users\pc\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.3.3.jar;C:\Users\pc\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.6.jar;C:\Users\pc\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.5.3.jar;C:\Users\pc\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.5.0.jar;C:\Users\pc\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.5.3.jar;C:\Users\pc\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.9.jar;C:\Users\pc\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.8.1.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk\jars\aws-java-sdk-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-support\jars\aws-java-sdk-support-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-core\jars\aws-java-sdk-core-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-simpledb\jars\aws-java-sdk-simpledb-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-simpleworkflow\jars\aws-java-sdk-simpleworkflow-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-storagegateway\jars\aws-java-sdk-storagegateway-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-route53\jars\aws-java-sdk-route53-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-s3\jars\aws-java-sdk-s3-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-kms\jars\aws-java-sdk-kms-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-importexport\jars\aws-java-sdk-importexport-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-sts\jars\aws-java-sdk-sts-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-sqs\jars\aws-java-sdk-sqs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-rds\jars\aws-java-sdk-rds-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-redshift\jars\aws-java-sdk-redshift-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticbeanstalk\jars\aws-java-sdk-elasticbeanstalk-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-glacier\jars\aws-java-sdk-glacier-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-sns\jars\aws-java-sdk-sns-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-iam\jars\aws-java-sdk-iam-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-datapipeline\jars\aws-java-sdk-datapipeline-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticloadbalancing\jars\aws-java-sdk-elasticloadbalancing-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-emr\jars\aws-java-sdk-emr-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticache\jars\aws-java-sdk-elasticache-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elastictranscoder\jars\aws-java-sdk-elastictranscoder-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ec2\jars\aws-java-sdk-ec2-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-dynamodb\jars\aws-java-sdk-dynamodb-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudtrail\jars\aws-java-sdk-cloudtrail-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudwatch\jars\aws-java-sdk-cloudwatch-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-logs\jars\aws-java-sdk-logs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cognitoidentity\jars\aws-java-sdk-cognitoidentity-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cognitosync\jars\aws-java-sdk-cognitosync-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-directconnect\jars\aws-java-sdk-directconnect-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudformation\jars\aws-java-sdk-cloudformation-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudfront\jars\aws-java-sdk-cloudfront-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-kinesis\jars\aws-java-sdk-kinesis-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-opsworks\jars\aws-java-sdk-opsworks-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ses\jars\aws-java-sdk-ses-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-autoscaling\jars\aws-java-sdk-autoscaling-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudsearch\jars\aws-java-sdk-cloudsearch-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudwatchmetrics\jars\aws-java-sdk-cloudwatchmetrics-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-swf-libraries\jars\aws-java-sdk-swf-libraries-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-codedeploy\jars\aws-java-sdk-codedeploy-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-codepipeline\jars\aws-java-sdk-codepipeline-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-config\jars\aws-java-sdk-config-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-lambda\jars\aws-java-sdk-lambda-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ecs\jars\aws-java-sdk-ecs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudhsm\jars\aws-java-sdk-cloudhsm-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ssm\jars\aws-java-sdk-ssm-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-workspaces\jars\aws-java-sdk-workspaces-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-machinelearning\jars\aws-java-sdk-machinelearning-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-directory\jars\aws-java-sdk-directory-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-efs\jars\aws-java-sdk-efs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-codecommit\jars\aws-java-sdk-codecommit-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-devicefarm\jars\aws-java-sdk-devicefarm-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticsearch\jars\aws-java-sdk-elasticsearch-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-waf\jars\aws-java-sdk-waf-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-marketplacecommerceanalytics\jars\aws-java-sdk-marketplacecommerceanalytics-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-inspector\jars\aws-java-sdk-inspector-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-iot\jars\aws-java-sdk-iot-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-api-gateway\jars\aws-java-sdk-api-gateway-1.10.37.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-testkit_2.11\jars\spray-testkit_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\com.typesafe.akka\akka-testkit_2.11\jars\akka-testkit_2.11-2.3.9.jar;C:\Users\pc\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.9.jar;C:\Users\pc\.ivy2\cache\org.scalatest\scalatest_2.11\bundles\scalatest_2.11-2.2.4.jar;C:\Users\pc\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.2.jar;C:\Users\pc\.ivy2\cache\org.mockito\mockito-all\jars\mockito-all-1.9.5.jar
+Read from stdout: C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala:6: imported `ProcessControllerHelper' is permanently hidden by definition of object ProcessControllerHelper in package support
+C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\test\scala\com\support\ProcessControllerlHelperSpec.scala:6: imported `ProcessControllerHelper' is permanently hidden by definition of object ProcessControllerHelper in package support
+Read from stdout: import com.support.ProcessControllerHelper
+import com.support.ProcessControllerHelper
 Read from stdout: ^
-                               ^
-Read from stdout: one error found
-one error found
-Compilation failed (CompilerInterface)
-Read from stdout: (compile:compileIncremental) Compilation failed
-(compile:compileIncremental) Compilation failed
-Total time: 3 s, completed 23-Mar-2016 01:23:36
-> server-post-command-error-handler
-> server-post-command-cleanup
-> server-handle-next-server-request
-> compile
-Evaluating tasks: compile:compile
-Running task... Cancel: sbt.server.ServerTaskCancellation@1dd1883, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set(C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\main\scala\com\services\ProcessControllerService.scala)
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\main\scala\com\services\ProcessControllerService.scala)
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\main\scala\com\services\ProcessControllerService.scala)
-
-Read from stdout: Compiling 1 Scala source to C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\target\scala-2.11\classes...
-Compiling 1 Scala source to C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\target\scala-2.11\classes...
-Getting compiler-interface from component compiler for Scala 2.11.7
-Other repositories:
-Default repositories:
-Getting compiler-interface from component compiler for Scala 2.11.7
-Other repositories:
-Default repositories:
-Running cached compiler cd2462, interfacing (CompilerInterface) with Scala compiler version 2.11.7
-Calling Scala compiler with arguments  (CompilerInterface):
-	-bootclasspath
-	C:\Program Files (x86)\Java\jre1.8.0_66\lib\resources.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\rt.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\jsse.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\jce.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\charsets.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\jfr.jar;C:\Program Files (x86)\Java\jre1.8.0_66\classes;C:\Users\pc\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.7.jar
-	-classpath
-	C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\target\scala-2.11\classes;C:\Users\pc\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.6.jar;C:\Users\pc\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-routing_2.11\bundles\spray-routing_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-http_2.11\bundles\spray-http_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-util_2.11\bundles\spray-util_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\org.parboiled\parboiled-scala_2.11\jars\parboiled-scala_2.11-1.1.7.jar;C:\Users\pc\.ivy2\cache\org.parboiled\parboiled-core\jars\parboiled-core-1.1.7.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-httpx_2.11\bundles\spray-httpx_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.3.jar;C:\Users\pc\.ivy2\cache\org.jvnet.mimepull\mimepull\jars\mimepull-1.9.5.jar;C:\Users\pc\.ivy2\cache\com.chuusai\shapeless_2.11\jars\shapeless_2.11-1.2.4.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-client_2.11\bundles\spray-client_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-can_2.11\bundles\spray-can_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-io_2.11\bundles\spray-io_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\org.json4s\json4s-native_2.11\jars\json4s-native_2.11-3.2.10.jar;C:\Users\pc\.ivy2\cache\org.json4s\json4s-core_2.11\jars\json4s-core_2.11-3.2.10.jar;C:\Users\pc\.ivy2\cache\org.json4s\json4s-ast_2.11\jars\json4s-ast_2.11-3.2.10.jar;C:\Users\pc\.ivy2\cache\com.thoughtworks.paranamer\paranamer\jars\paranamer-2.6.jar;C:\Users\pc\.ivy2\cache\org.scala-lang\scalap\jars\scalap-2.11.0.jar;C:\Users\pc\.ivy2\cache\org.scala-lang\scala-compiler\jars\scala-compiler-2.11.0.jar;C:\Users\pc\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.0.jar;C:\Users\pc\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\pc\.ivy2\cache\net.liftweb\lift-json_2.10\jars\lift-json_2.10-3.0-M1.jar;C:\Users\pc\.ivy2\cache\com.typesafe.scala-logging\scala-logging-slf4j_2.11\jars\scala-logging-slf4j_2.11-2.1.2.jar;C:\Users\pc\.ivy2\cache\com.typesafe.scala-logging\scala-logging-api_2.11\jars\scala-logging-api_2.11-2.1.2.jar;C:\Users\pc\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.7.jar;C:\Users\pc\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.2.jar;C:\Users\pc\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.2.jar;C:\Users\pc\.ivy2\cache\com.typesafe.slick\slick_2.11\bundles\slick_2.11-3.0.0.jar;C:\Users\pc\.ivy2\cache\org.reactivestreams\reactive-streams\jars\reactive-streams-1.0.0.jar;C:\Users\pc\.ivy2\cache\org.slf4j\slf4j-nop\jars\slf4j-nop-1.6.4.jar;C:\Users\pc\.ivy2\cache\com.github.seratch\awscala_2.11\jars\awscala_2.11-0.5.5.jar;C:\Users\pc\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.3.jar;C:\Users\pc\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.3.6.jar;C:\Users\pc\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.3.3.jar;C:\Users\pc\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.6.jar;C:\Users\pc\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.5.3.jar;C:\Users\pc\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.5.0.jar;C:\Users\pc\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.5.3.jar;C:\Users\pc\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.9.jar;C:\Users\pc\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.8.1.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk\jars\aws-java-sdk-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-support\jars\aws-java-sdk-support-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-core\jars\aws-java-sdk-core-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-simpledb\jars\aws-java-sdk-simpledb-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-simpleworkflow\jars\aws-java-sdk-simpleworkflow-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-storagegateway\jars\aws-java-sdk-storagegateway-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-route53\jars\aws-java-sdk-route53-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-s3\jars\aws-java-sdk-s3-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-kms\jars\aws-java-sdk-kms-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-importexport\jars\aws-java-sdk-importexport-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-sts\jars\aws-java-sdk-sts-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-sqs\jars\aws-java-sdk-sqs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-rds\jars\aws-java-sdk-rds-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-redshift\jars\aws-java-sdk-redshift-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticbeanstalk\jars\aws-java-sdk-elasticbeanstalk-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-glacier\jars\aws-java-sdk-glacier-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-sns\jars\aws-java-sdk-sns-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-iam\jars\aws-java-sdk-iam-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-datapipeline\jars\aws-java-sdk-datapipeline-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticloadbalancing\jars\aws-java-sdk-elasticloadbalancing-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-emr\jars\aws-java-sdk-emr-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticache\jars\aws-java-sdk-elasticache-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elastictranscoder\jars\aws-java-sdk-elastictranscoder-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ec2\jars\aws-java-sdk-ec2-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-dynamodb\jars\aws-java-sdk-dynamodb-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudtrail\jars\aws-java-sdk-cloudtrail-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudwatch\jars\aws-java-sdk-cloudwatch-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-logs\jars\aws-java-sdk-logs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cognitoidentity\jars\aws-java-sdk-cognitoidentity-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cognitosync\jars\aws-java-sdk-cognitosync-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-directconnect\jars\aws-java-sdk-directconnect-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudformation\jars\aws-java-sdk-cloudformation-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudfront\jars\aws-java-sdk-cloudfront-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-kinesis\jars\aws-java-sdk-kinesis-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-opsworks\jars\aws-java-sdk-opsworks-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ses\jars\aws-java-sdk-ses-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-autoscaling\jars\aws-java-sdk-autoscaling-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudsearch\jars\aws-java-sdk-cloudsearch-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudwatchmetrics\jars\aws-java-sdk-cloudwatchmetrics-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-swf-libraries\jars\aws-java-sdk-swf-libraries-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-codedeploy\jars\aws-java-sdk-codedeploy-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-codepipeline\jars\aws-java-sdk-codepipeline-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-config\jars\aws-java-sdk-config-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-lambda\jars\aws-java-sdk-lambda-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ecs\jars\aws-java-sdk-ecs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudhsm\jars\aws-java-sdk-cloudhsm-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ssm\jars\aws-java-sdk-ssm-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-workspaces\jars\aws-java-sdk-workspaces-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-machinelearning\jars\aws-java-sdk-machinelearning-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-directory\jars\aws-java-sdk-directory-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-efs\jars\aws-java-sdk-efs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-codecommit\jars\aws-java-sdk-codecommit-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-devicefarm\jars\aws-java-sdk-devicefarm-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticsearch\jars\aws-java-sdk-elasticsearch-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-waf\jars\aws-java-sdk-waf-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-marketplacecommerceanalytics\jars\aws-java-sdk-marketplacecommerceanalytics-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-inspector\jars\aws-java-sdk-inspector-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-iot\jars\aws-java-sdk-iot-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-api-gateway\jars\aws-java-sdk-api-gateway-1.10.37.jar
-Scala compilation took 2.812726737 s
+                   ^
+Read from stdout: one warning found
+one warning found
+Scala compilation took 1.626765518 s
 New invalidations:
 	Set()
 Initial set of included nodes: Set()
 Previously invalidated, but (transitively) depend on new invalidations:
 	Set()
 All newly invalidated sources after taking into account (previously) recompiled sources:Set()
-Total time: 3 s, completed 23-Mar-2016 01:24:32
+Copy resource mappings: 
+	
+Framework implementation 'org.scalacheck.ScalaCheckFramework' not present.
+Framework implementation 'org.specs2.runner.Specs2Framework' not present.
+Framework implementation 'org.specs2.runner.SpecsFramework' not present.
+Framework implementation 'org.specs.runner.SpecsFramework' not present.
+Framework implementation 'com.novocode.junit.JUnitFramework' not present.
+Subclass fingerprints: List((org.scalatest.Suite,false,org.scalatest.tools.Framework$$anon$1@194c50a))
+Annotation fingerprints: List((org.scalatest.WrapWith,false,org.scalatest.tools.Framework$$anon$2@1870a13))
+Running TaskDef(com.services.ProcessControllerServiceSpec, org.scalatest.tools.Framework$$anon$1@194c50a, false, [SuiteSelector])
+Running TaskDef(com.support.ProcessControllerHelperSpec, org.scalatest.tools.Framework$$anon$1@194c50a, false, [SuiteSelector])
+Read from stdout: ProcessControllerServiceSpec:
+ProcessControllerServiceSpec:
+No such Resource
+[{"lat":"53.35870269999999","lng":"-6.4438657"}]
+Read from stdout: ProcessControllerHelperSpec:
+Read from stdout: Calling the recordCount function on the test Data Set
+Read from stdout: - should produce the integer value 3
+Read from stdout: Calling the Remote Service switch function with the parameters towns and Skerries
+Read from stdout: - should return content matching the expected JSON provided *** FAILED ***
+Read from stdout: "[No such Resource]" did not equal "[
+Read from stdout: [
+Read from stdout: {
+Read from stdout: "id": 12,
+Read from stdout: "name": "Village Art Gallery",
+Read from stdout: "channel": "art",
+Read from stdout: "channel_type": "gallery",
+Read from stdout: "phone": "+35318492236",
+Read from stdout: "address": "83 Strand Street Skerries Co. Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 13,
+Read from stdout: "name": "Carrolls Pierhouse Hotel Restaurant",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "restaurant",
+Read from stdout: "phone": "+35318491033",
+Read from stdout: "address": "Harbour Road Skerries Co. Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 14,
+Read from stdout: "name": "Central Cafe",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "cafe",
+Read from stdout: "phone": "+35318491374",
+Read from stdout: "address": "75 Strand Street Skerries Co.Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 15,
+Read from stdout: "name": "O'Sheas Bar & Restaurant",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "pub",
+Read from stdout: "phone": "+35318491374",
+Read from stdout: "address": "17 New Street Skerries Co Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 16,
+Read from stdout: "name": "Olive",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "cafe",
+Read from stdout: "phone": "+35318490310",
+Read from stdout: "address": "86A Strand Street Skerries Co. Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 17,
+Read from stdout: "name": "Parachute Cafe",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "cafe",
+Read from stdout: "phone": "+35318492322",
+Read from stdout: "address": "47 Thomas Hand Street Skerries Co. Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 18,
+Read from stdout: "name": "Pasta Pizza",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "restaurant",
+Read from stdout: "phone": "+35318492724",
+Read from stdout: "address": "54 Strand Street Skerries Co. Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 19,
+Read from stdout: "name": "Pheonix Chinese Take Away",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "takeaway",
+Read from stdout: "phone": "+35318490848",
+Read from stdout: "address": "South Strand Skerries Co Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 20,
+Read from stdout: "name": "Russelle Restauran",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "restaurant",
+Read from stdout: "phone": "+35318492450",
+Read from stdout: "address": "24 Strand Street Skerries Co. Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 21,
+Read from stdout: "name": "The Cottage Bistro",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "restaurant",
+Read from stdout: "phone": "+35318492450",
+Read from stdout: "address": "17 New Street Skerries Co. Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 22,
+Read from stdout: "name": "The Lifeboat Restaurant",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "restaurant",
+Read from stdout: "phone": "+35318490109",
+Read from stdout: "address": "Harbour Road Skerries Co Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: }
+Read from stdout: ]
+Read from stdout: ]" (ProcessControllerlHelperSpec.scala:167)
+Read from stdout: Passing the parameter 115A Sarsfield Park Lucan Co Dublin to the encode url function
+Read from stdout: - should return 115A+Sarsfield+Park+Lucan+Co+Dublin
+Read from stdout: Calling the Remote Service switch function with the parameters gts and 115A Sarsfield Park Lucan Co Dublin
+Read from stdout: - should retrun content matching the expected JSON provided
+Read from stdout: Calling the Get Service function with the parameters: http://localhost:8082/geoTaggings/addresses/115A+Sarsfield+Park+Lucan+Co+Dublin
+Read from stdout: - should retrun content matching the expected JSON provided
+ProcessControllerHelperSpec:
+Calling the recordCount function on the test Data Set
+- should produce the integer value 3
+Calling the Remote Service switch function with the parameters towns and Skerries
+- should return content matching the expected JSON provided *** FAILED ***
+  "[No such Resource]" did not equal "[
+      [
+    {
+      "id": 12,
+      "name": "Village Art Gallery",
+      "channel": "art",
+      "channel_type": "gallery",
+      "phone": "+35318492236",
+      "address": "83 Strand Street Skerries Co. Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 13,
+      "name": "Carrolls Pierhouse Hotel Restaurant",
+      "channel": "f&b",
+      "channel_type": "restaurant",
+      "phone": "+35318491033",
+      "address": "Harbour Road Skerries Co. Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 14,
+      "name": "Central Cafe",
+      "channel": "f&b",
+      "channel_type": "cafe",
+      "phone": "+35318491374",
+      "address": "75 Strand Street Skerries Co.Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 15,
+      "name": "O'Sheas Bar & Restaurant",
+      "channel": "f&b",
+      "channel_type": "pub",
+      "phone": "+35318491374",
+      "address": "17 New Street Skerries Co Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 16,
+      "name": "Olive",
+      "channel": "f&b",
+      "channel_type": "cafe",
+      "phone": "+35318490310",
+      "address": "86A Strand Street Skerries Co. Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 17,
+      "name": "Parachute Cafe",
+      "channel": "f&b",
+      "channel_type": "cafe",
+      "phone": "+35318492322",
+      "address": "47 Thomas Hand Street Skerries Co. Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 18,
+      "name": "Pasta Pizza",
+      "channel": "f&b",
+      "channel_type": "restaurant",
+      "phone": "+35318492724",
+      "address": "54 Strand Street Skerries Co. Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 19,
+      "name": "Pheonix Chinese Take Away",
+      "channel": "f&b",
+      "channel_type": "takeaway",
+      "phone": "+35318490848",
+      "address": "South Strand Skerries Co Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 20,
+      "name": "Russelle Restauran",
+      "channel": "f&b",
+      "channel_type": "restaurant",
+      "phone": "+35318492450",
+      "address": "24 Strand Street Skerries Co. Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 21,
+      "name": "The Cottage Bistro",
+      "channel": "f&b",
+      "channel_type": "restaurant",
+      "phone": "+35318492450",
+      "address": "17 New Street Skerries Co. Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 22,
+      "name": "The Lifeboat Restaurant",
+      "channel": "f&b",
+      "channel_type": "restaurant",
+      "phone": "+35318490109",
+      "address": "Harbour Road Skerries Co Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    }
+  ]
+      ]" (ProcessControllerlHelperSpec.scala:167)
+Passing the parameter 115A Sarsfield Park Lucan Co Dublin to the encode url function
+- should return 115A+Sarsfield+Park+Lucan+Co+Dublin
+Calling the Remote Service switch function with the parameters gts and 115A Sarsfield Park Lucan Co Dublin
+- should retrun content matching the expected JSON provided
+Calling the Get Service function with the parameters: http://localhost:8082/geoTaggings/addresses/115A+Sarsfield+Park+Lucan+Co+Dublin
+- should retrun content matching the expected JSON provided
+Read from stdout: Run completed in 805 milliseconds.
+Read from stdout: Total number of tests run: 5
+Read from stdout: Suites: completed 2, aborted 0
+Read from stdout: Tests: succeeded 4, failed 1, canceled 0, ignored 0, pending 0
+Read from stdout: *** 1 TEST FAILED ***
+Run completed in 805 milliseconds.
+Total number of tests run: 5
+Suites: completed 2, aborted 0
+Tests: succeeded 4, failed 1, canceled 0, ignored 0, pending 0
+*** 1 TEST FAILED ***
+Passed tests:
+	com.services.ProcessControllerServiceSpec
+Read from stdout: Failed tests:
+Failed tests:
+Read from stdout: 	com.support.ProcessControllerHelperSpec
+	com.support.ProcessControllerHelperSpec
+Read from stdout: (test:test) sbt.TestsFailedException: Tests unsuccessful
+(test:test) sbt.TestsFailedException: Tests unsuccessful
+Total time: 3 s, completed 25-Mar-2016 17:41:00
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> test
+Evaluating tasks: test:test
+Running task... Cancel: sbt.server.ServerTaskCancellation@8fb186, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	
+Framework implementation 'org.scalacheck.ScalaCheckFramework' not present.
+Framework implementation 'org.specs2.runner.Specs2Framework' not present.
+Framework implementation 'org.specs2.runner.SpecsFramework' not present.
+Framework implementation 'org.specs.runner.SpecsFramework' not present.
+Framework implementation 'com.novocode.junit.JUnitFramework' not present.
+Subclass fingerprints: List((org.scalatest.Suite,false,org.scalatest.tools.Framework$$anon$1@96efaf))
+Annotation fingerprints: List((org.scalatest.WrapWith,false,org.scalatest.tools.Framework$$anon$2@1e55c82))
+Running TaskDef(com.support.ProcessControllerHelperSpec, org.scalatest.tools.Framework$$anon$1@96efaf, false, [SuiteSelector])
+Running TaskDef(com.services.ProcessControllerServiceSpec, org.scalatest.tools.Framework$$anon$1@96efaf, false, [SuiteSelector])
+Read from stdout: ProcessControllerServiceSpec:
+ProcessControllerServiceSpec:
+No such Resource
+[{"lat":"53.35870269999999","lng":"-6.4438657"}]
+Read from stdout: ProcessControllerHelperSpec:
+Read from stdout: Calling the recordCount function on the test Data Set
+Read from stdout: - should produce the integer value 3
+Read from stdout: Calling the Remote Service switch function with the parameters towns and Skerries
+Read from stdout: - should return content matching the expected JSON provided *** FAILED ***
+Read from stdout: "[No such Resource]" did not equal "[
+Read from stdout: [
+Read from stdout: {
+Read from stdout: "id": 12,
+Read from stdout: "name": "Village Art Gallery",
+Read from stdout: "channel": "art",
+Read from stdout: "channel_type": "gallery",
+Read from stdout: "phone": "+35318492236",
+Read from stdout: "address": "83 Strand Street Skerries Co. Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 13,
+Read from stdout: "name": "Carrolls Pierhouse Hotel Restaurant",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "restaurant",
+Read from stdout: "phone": "+35318491033",
+Read from stdout: "address": "Harbour Road Skerries Co. Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 14,
+Read from stdout: "name": "Central Cafe",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "cafe",
+Read from stdout: "phone": "+35318491374",
+Read from stdout: "address": "75 Strand Street Skerries Co.Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 15,
+Read from stdout: "name": "O'Sheas Bar & Restaurant",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "pub",
+Read from stdout: "phone": "+35318491374",
+Read from stdout: "address": "17 New Street Skerries Co Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 16,
+Read from stdout: "name": "Olive",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "cafe",
+Read from stdout: "phone": "+35318490310",
+Read from stdout: "address": "86A Strand Street Skerries Co. Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 17,
+Read from stdout: "name": "Parachute Cafe",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "cafe",
+Read from stdout: "phone": "+35318492322",
+Read from stdout: "address": "47 Thomas Hand Street Skerries Co. Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 18,
+Read from stdout: "name": "Pasta Pizza",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "restaurant",
+Read from stdout: "phone": "+35318492724",
+Read from stdout: "address": "54 Strand Street Skerries Co. Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 19,
+Read from stdout: "name": "Pheonix Chinese Take Away",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "takeaway",
+Read from stdout: "phone": "+35318490848",
+Read from stdout: "address": "South Strand Skerries Co Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 20,
+Read from stdout: "name": "Russelle Restauran",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "restaurant",
+Read from stdout: "phone": "+35318492450",
+Read from stdout: "address": "24 Strand Street Skerries Co. Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 21,
+Read from stdout: "name": "The Cottage Bistro",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "restaurant",
+Read from stdout: "phone": "+35318492450",
+Read from stdout: "address": "17 New Street Skerries Co. Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: },
+Read from stdout: {
+Read from stdout: "id": 22,
+Read from stdout: "name": "The Lifeboat Restaurant",
+Read from stdout: "channel": "f&b",
+Read from stdout: "channel_type": "restaurant",
+Read from stdout: "phone": "+35318490109",
+Read from stdout: "address": "Harbour Road Skerries Co Dublin",
+Read from stdout: "town": "Skerries",
+Read from stdout: "county": "Dublin",
+Read from stdout: "region": "Leinster"
+Read from stdout: }
+Read from stdout: ]
+Read from stdout: ]" (ProcessControllerlHelperSpec.scala:167)
+Read from stdout: Passing the parameter 115A Sarsfield Park Lucan Co Dublin to the encode url function
+Read from stdout: - should return 115A+Sarsfield+Park+Lucan+Co+Dublin
+Read from stdout: Calling the Remote Service switch function with the parameters gts and 115A Sarsfield Park Lucan Co Dublin
+Read from stdout: - should retrun content matching the expected JSON provided
+Read from stdout: Calling the Get Service function with the parameters: http://localhost:8082/geoTaggings/addresses/115A+Sarsfield+Park+Lucan+Co+Dublin
+Read from stdout: - should retrun content matching the expected JSON provided
+ProcessControllerHelperSpec:
+Calling the recordCount function on the test Data Set
+- should produce the integer value 3
+Calling the Remote Service switch function with the parameters towns and Skerries
+- should return content matching the expected JSON provided *** FAILED ***
+  "[No such Resource]" did not equal "[
+      [
+    {
+      "id": 12,
+      "name": "Village Art Gallery",
+      "channel": "art",
+      "channel_type": "gallery",
+      "phone": "+35318492236",
+      "address": "83 Strand Street Skerries Co. Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 13,
+      "name": "Carrolls Pierhouse Hotel Restaurant",
+      "channel": "f&b",
+      "channel_type": "restaurant",
+      "phone": "+35318491033",
+      "address": "Harbour Road Skerries Co. Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 14,
+      "name": "Central Cafe",
+      "channel": "f&b",
+      "channel_type": "cafe",
+      "phone": "+35318491374",
+      "address": "75 Strand Street Skerries Co.Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 15,
+      "name": "O'Sheas Bar & Restaurant",
+      "channel": "f&b",
+      "channel_type": "pub",
+      "phone": "+35318491374",
+      "address": "17 New Street Skerries Co Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 16,
+      "name": "Olive",
+      "channel": "f&b",
+      "channel_type": "cafe",
+      "phone": "+35318490310",
+      "address": "86A Strand Street Skerries Co. Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 17,
+      "name": "Parachute Cafe",
+      "channel": "f&b",
+      "channel_type": "cafe",
+      "phone": "+35318492322",
+      "address": "47 Thomas Hand Street Skerries Co. Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 18,
+      "name": "Pasta Pizza",
+      "channel": "f&b",
+      "channel_type": "restaurant",
+      "phone": "+35318492724",
+      "address": "54 Strand Street Skerries Co. Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 19,
+      "name": "Pheonix Chinese Take Away",
+      "channel": "f&b",
+      "channel_type": "takeaway",
+      "phone": "+35318490848",
+      "address": "South Strand Skerries Co Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 20,
+      "name": "Russelle Restauran",
+      "channel": "f&b",
+      "channel_type": "restaurant",
+      "phone": "+35318492450",
+      "address": "24 Strand Street Skerries Co. Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 21,
+      "name": "The Cottage Bistro",
+      "channel": "f&b",
+      "channel_type": "restaurant",
+      "phone": "+35318492450",
+      "address": "17 New Street Skerries Co. Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    },
+    {
+      "id": 22,
+      "name": "The Lifeboat Restaurant",
+      "channel": "f&b",
+      "channel_type": "restaurant",
+      "phone": "+35318490109",
+      "address": "Harbour Road Skerries Co Dublin",
+      "town": "Skerries",
+      "county": "Dublin",
+      "region": "Leinster"
+    }
+  ]
+      ]" (ProcessControllerlHelperSpec.scala:167)
+Passing the parameter 115A Sarsfield Park Lucan Co Dublin to the encode url function
+- should return 115A+Sarsfield+Park+Lucan+Co+Dublin
+Calling the Remote Service switch function with the parameters gts and 115A Sarsfield Park Lucan Co Dublin
+- should retrun content matching the expected JSON provided
+Calling the Get Service function with the parameters: http://localhost:8082/geoTaggings/addresses/115A+Sarsfield+Park+Lucan+Co+Dublin
+- should retrun content matching the expected JSON provided
+Read from stdout: Run completed in 605 milliseconds.
+Read from stdout: Total number of tests run: 5
+Read from stdout: Suites: completed 2, aborted 0
+Read from stdout: Tests: succeeded 4, failed 1, canceled 0, ignored 0, pending 0
+Read from stdout: *** 1 TEST FAILED ***
+Run completed in 605 milliseconds.
+Total number of tests run: 5
+Suites: completed 2, aborted 0
+Tests: succeeded 4, failed 1, canceled 0, ignored 0, pending 0
+*** 1 TEST FAILED ***
+Passed tests:
+	com.services.ProcessControllerServiceSpec
+Read from stdout: Failed tests:
+Failed tests:
+Read from stdout: 	com.support.ProcessControllerHelperSpec
+	com.support.ProcessControllerHelperSpec
+Read from stdout: (test:test) sbt.TestsFailedException: Tests unsuccessful
+(test:test) sbt.TestsFailedException: Tests unsuccessful
+Total time: 1 s, completed 25-Mar-2016 17:42:33
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRunMain com.server.ProcessConrollerServer
+Evaluating tasks: compile:backgroundRunMain
+Running task... Cancel: sbt.server.ServerTaskCancellation@eeff54, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	
+Total time: 0 s, completed 25-Mar-2016 17:42:53
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@1af1474, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 0 s, completed 25-Mar-2016 17:45:13
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@bc080, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 0 s, completed 25-Mar-2016 17:48:25
 > server-post-command-cleanup
 > server-handle-next-server-request
 > jobStop 2
 Evaluating tasks: *:jobStop
-Running task... Cancel: sbt.server.ServerTaskCancellation@adde3e, check cycles: false
-Total time: 0 s, completed 23-Mar-2016 01:24:38
+Running task... Cancel: sbt.server.ServerTaskCancellation@1f416dc, check cycles: false
+Total time: 0 s, completed 26-Mar-2016 01:13:20
 > server-post-command-cleanup
 Exception in thread "sbt-bg-threads-3" java.lang.RuntimeException: Nonzero exit code returned from runner: 1
 	at scala.sys.package$.error(package.scala:27)
@@ -331,193 +1773,10 @@ Exception in thread "sbt-bg-threads-3" java.lang.RuntimeException: Nonzero exit 
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 > server-handle-next-server-request
-> compile
-Evaluating tasks: compile:compile
-Running task... Cancel: sbt.server.ServerTaskCancellation@105ede9, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set(C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\main\scala\com\models\RuntimeStats.scala)
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\main\scala\com\models\RuntimeStats.scala)
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\main\scala\com\models\RuntimeStats.scala)
-
-Read from stdout: Compiling 1 Scala source to C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\target\scala-2.11\classes...
-Compiling 1 Scala source to C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\target\scala-2.11\classes...
-Getting compiler-interface from component compiler for Scala 2.11.7
-Other repositories:
-Default repositories:
-Getting compiler-interface from component compiler for Scala 2.11.7
-Other repositories:
-Default repositories:
-Running cached compiler 548b4f, interfacing (CompilerInterface) with Scala compiler version 2.11.7
-Calling Scala compiler with arguments  (CompilerInterface):
-	-bootclasspath
-	C:\Program Files (x86)\Java\jre1.8.0_66\lib\resources.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\rt.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\jsse.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\jce.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\charsets.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\jfr.jar;C:\Program Files (x86)\Java\jre1.8.0_66\classes;C:\Users\pc\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.7.jar
-	-classpath
-	C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\target\scala-2.11\classes;C:\Users\pc\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.6.jar;C:\Users\pc\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-routing_2.11\bundles\spray-routing_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-http_2.11\bundles\spray-http_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-util_2.11\bundles\spray-util_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\org.parboiled\parboiled-scala_2.11\jars\parboiled-scala_2.11-1.1.7.jar;C:\Users\pc\.ivy2\cache\org.parboiled\parboiled-core\jars\parboiled-core-1.1.7.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-httpx_2.11\bundles\spray-httpx_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.3.jar;C:\Users\pc\.ivy2\cache\org.jvnet.mimepull\mimepull\jars\mimepull-1.9.5.jar;C:\Users\pc\.ivy2\cache\com.chuusai\shapeless_2.11\jars\shapeless_2.11-1.2.4.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-client_2.11\bundles\spray-client_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-can_2.11\bundles\spray-can_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-io_2.11\bundles\spray-io_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\org.json4s\json4s-native_2.11\jars\json4s-native_2.11-3.2.10.jar;C:\Users\pc\.ivy2\cache\org.json4s\json4s-core_2.11\jars\json4s-core_2.11-3.2.10.jar;C:\Users\pc\.ivy2\cache\org.json4s\json4s-ast_2.11\jars\json4s-ast_2.11-3.2.10.jar;C:\Users\pc\.ivy2\cache\com.thoughtworks.paranamer\paranamer\jars\paranamer-2.6.jar;C:\Users\pc\.ivy2\cache\org.scala-lang\scalap\jars\scalap-2.11.0.jar;C:\Users\pc\.ivy2\cache\org.scala-lang\scala-compiler\jars\scala-compiler-2.11.0.jar;C:\Users\pc\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.0.jar;C:\Users\pc\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\pc\.ivy2\cache\net.liftweb\lift-json_2.10\jars\lift-json_2.10-3.0-M1.jar;C:\Users\pc\.ivy2\cache\com.typesafe.scala-logging\scala-logging-slf4j_2.11\jars\scala-logging-slf4j_2.11-2.1.2.jar;C:\Users\pc\.ivy2\cache\com.typesafe.scala-logging\scala-logging-api_2.11\jars\scala-logging-api_2.11-2.1.2.jar;C:\Users\pc\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.7.jar;C:\Users\pc\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.2.jar;C:\Users\pc\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.2.jar;C:\Users\pc\.ivy2\cache\com.typesafe.slick\slick_2.11\bundles\slick_2.11-3.0.0.jar;C:\Users\pc\.ivy2\cache\org.reactivestreams\reactive-streams\jars\reactive-streams-1.0.0.jar;C:\Users\pc\.ivy2\cache\org.slf4j\slf4j-nop\jars\slf4j-nop-1.6.4.jar;C:\Users\pc\.ivy2\cache\com.github.seratch\awscala_2.11\jars\awscala_2.11-0.5.5.jar;C:\Users\pc\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.3.jar;C:\Users\pc\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.3.6.jar;C:\Users\pc\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.3.3.jar;C:\Users\pc\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.6.jar;C:\Users\pc\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.5.3.jar;C:\Users\pc\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.5.0.jar;C:\Users\pc\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.5.3.jar;C:\Users\pc\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.9.jar;C:\Users\pc\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.8.1.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk\jars\aws-java-sdk-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-support\jars\aws-java-sdk-support-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-core\jars\aws-java-sdk-core-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-simpledb\jars\aws-java-sdk-simpledb-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-simpleworkflow\jars\aws-java-sdk-simpleworkflow-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-storagegateway\jars\aws-java-sdk-storagegateway-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-route53\jars\aws-java-sdk-route53-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-s3\jars\aws-java-sdk-s3-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-kms\jars\aws-java-sdk-kms-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-importexport\jars\aws-java-sdk-importexport-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-sts\jars\aws-java-sdk-sts-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-sqs\jars\aws-java-sdk-sqs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-rds\jars\aws-java-sdk-rds-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-redshift\jars\aws-java-sdk-redshift-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticbeanstalk\jars\aws-java-sdk-elasticbeanstalk-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-glacier\jars\aws-java-sdk-glacier-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-sns\jars\aws-java-sdk-sns-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-iam\jars\aws-java-sdk-iam-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-datapipeline\jars\aws-java-sdk-datapipeline-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticloadbalancing\jars\aws-java-sdk-elasticloadbalancing-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-emr\jars\aws-java-sdk-emr-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticache\jars\aws-java-sdk-elasticache-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elastictranscoder\jars\aws-java-sdk-elastictranscoder-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ec2\jars\aws-java-sdk-ec2-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-dynamodb\jars\aws-java-sdk-dynamodb-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudtrail\jars\aws-java-sdk-cloudtrail-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudwatch\jars\aws-java-sdk-cloudwatch-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-logs\jars\aws-java-sdk-logs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cognitoidentity\jars\aws-java-sdk-cognitoidentity-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cognitosync\jars\aws-java-sdk-cognitosync-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-directconnect\jars\aws-java-sdk-directconnect-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudformation\jars\aws-java-sdk-cloudformation-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudfront\jars\aws-java-sdk-cloudfront-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-kinesis\jars\aws-java-sdk-kinesis-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-opsworks\jars\aws-java-sdk-opsworks-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ses\jars\aws-java-sdk-ses-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-autoscaling\jars\aws-java-sdk-autoscaling-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudsearch\jars\aws-java-sdk-cloudsearch-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudwatchmetrics\jars\aws-java-sdk-cloudwatchmetrics-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-swf-libraries\jars\aws-java-sdk-swf-libraries-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-codedeploy\jars\aws-java-sdk-codedeploy-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-codepipeline\jars\aws-java-sdk-codepipeline-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-config\jars\aws-java-sdk-config-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-lambda\jars\aws-java-sdk-lambda-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ecs\jars\aws-java-sdk-ecs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudhsm\jars\aws-java-sdk-cloudhsm-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ssm\jars\aws-java-sdk-ssm-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-workspaces\jars\aws-java-sdk-workspaces-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-machinelearning\jars\aws-java-sdk-machinelearning-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-directory\jars\aws-java-sdk-directory-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-efs\jars\aws-java-sdk-efs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-codecommit\jars\aws-java-sdk-codecommit-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-devicefarm\jars\aws-java-sdk-devicefarm-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticsearch\jars\aws-java-sdk-elasticsearch-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-waf\jars\aws-java-sdk-waf-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-marketplacecommerceanalytics\jars\aws-java-sdk-marketplacecommerceanalytics-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-inspector\jars\aws-java-sdk-inspector-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-iot\jars\aws-java-sdk-iot-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-api-gateway\jars\aws-java-sdk-api-gateway-1.10.37.jar
-Scala compilation took 1.210274225 s
-Invalidating C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\main\scala\com\models\RuntimeStats.scala...
-Invalidating (transitively) by inheritance from C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\main\scala\com\models\RuntimeStats.scala...
-Initial set of included nodes: Set(C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\main\scala\com\models\RuntimeStats.scala)
-Invalidated by transitive inheritance dependency: Set(C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\main\scala\com\models\RuntimeStats.scala)
-The C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\main\scala\com\models\RuntimeStats.scala source file has the following regular definitions changed:
-	stats.
-All member reference dependencies will be considered within this context.
-The following modified names cause invalidation of C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\main\scala\com\services\ProcessControllerService.scala: Set(stats)
-New invalidations:
-	Set(C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\main\scala\com\services\ProcessControllerService.scala)
-Initial set of included nodes: Set(C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\main\scala\com\services\ProcessControllerService.scala)
-Including C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\main\scala\com\server\ProcessControllerServer.scala by C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\main\scala\com\services\ProcessControllerService.scala
-Previously invalidated, but (transitively) depend on new invalidations:
-	Set()
-All newly invalidated sources after taking into account (previously) recompiled sources:Set(C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\src\main\scala\com\services\ProcessControllerService.scala)
-Read from stdout: Compiling 1 Scala source to C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\target\scala-2.11\classes...
-Compiling 1 Scala source to C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\target\scala-2.11\classes...
-Getting compiler-interface from component compiler for Scala 2.11.7
-Other repositories:
-Default repositories:
-Getting compiler-interface from component compiler for Scala 2.11.7
-Other repositories:
-Default repositories:
-Running cached compiler 10fa900, interfacing (CompilerInterface) with Scala compiler version 2.11.7
-Calling Scala compiler with arguments  (CompilerInterface):
-	-bootclasspath
-	C:\Program Files (x86)\Java\jre1.8.0_66\lib\resources.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\rt.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\jsse.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\jce.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\charsets.jar;C:\Program Files (x86)\Java\jre1.8.0_66\lib\jfr.jar;C:\Program Files (x86)\Java\jre1.8.0_66\classes;C:\Users\pc\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.7.jar
-	-classpath
-	C:\Users\pc\dev\fyp\fyp-dev\DEV-FYP-Process-Controller-Service\target\scala-2.11\classes;C:\Users\pc\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.6.jar;C:\Users\pc\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-routing_2.11\bundles\spray-routing_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-http_2.11\bundles\spray-http_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-util_2.11\bundles\spray-util_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\org.parboiled\parboiled-scala_2.11\jars\parboiled-scala_2.11-1.1.7.jar;C:\Users\pc\.ivy2\cache\org.parboiled\parboiled-core\jars\parboiled-core-1.1.7.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-httpx_2.11\bundles\spray-httpx_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.3.jar;C:\Users\pc\.ivy2\cache\org.jvnet.mimepull\mimepull\jars\mimepull-1.9.5.jar;C:\Users\pc\.ivy2\cache\com.chuusai\shapeless_2.11\jars\shapeless_2.11-1.2.4.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-client_2.11\bundles\spray-client_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-can_2.11\bundles\spray-can_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\io.spray\spray-io_2.11\bundles\spray-io_2.11-1.3.3.jar;C:\Users\pc\.ivy2\cache\org.json4s\json4s-native_2.11\jars\json4s-native_2.11-3.2.10.jar;C:\Users\pc\.ivy2\cache\org.json4s\json4s-core_2.11\jars\json4s-core_2.11-3.2.10.jar;C:\Users\pc\.ivy2\cache\org.json4s\json4s-ast_2.11\jars\json4s-ast_2.11-3.2.10.jar;C:\Users\pc\.ivy2\cache\com.thoughtworks.paranamer\paranamer\jars\paranamer-2.6.jar;C:\Users\pc\.ivy2\cache\org.scala-lang\scalap\jars\scalap-2.11.0.jar;C:\Users\pc\.ivy2\cache\org.scala-lang\scala-compiler\jars\scala-compiler-2.11.0.jar;C:\Users\pc\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.0.jar;C:\Users\pc\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\pc\.ivy2\cache\net.liftweb\lift-json_2.10\jars\lift-json_2.10-3.0-M1.jar;C:\Users\pc\.ivy2\cache\com.typesafe.scala-logging\scala-logging-slf4j_2.11\jars\scala-logging-slf4j_2.11-2.1.2.jar;C:\Users\pc\.ivy2\cache\com.typesafe.scala-logging\scala-logging-api_2.11\jars\scala-logging-api_2.11-2.1.2.jar;C:\Users\pc\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.7.jar;C:\Users\pc\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.2.jar;C:\Users\pc\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.2.jar;C:\Users\pc\.ivy2\cache\com.typesafe.slick\slick_2.11\bundles\slick_2.11-3.0.0.jar;C:\Users\pc\.ivy2\cache\org.reactivestreams\reactive-streams\jars\reactive-streams-1.0.0.jar;C:\Users\pc\.ivy2\cache\org.slf4j\slf4j-nop\jars\slf4j-nop-1.6.4.jar;C:\Users\pc\.ivy2\cache\com.github.seratch\awscala_2.11\jars\awscala_2.11-0.5.5.jar;C:\Users\pc\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.3.jar;C:\Users\pc\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.3.6.jar;C:\Users\pc\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.3.3.jar;C:\Users\pc\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.6.jar;C:\Users\pc\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.5.3.jar;C:\Users\pc\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.5.0.jar;C:\Users\pc\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.5.3.jar;C:\Users\pc\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.9.jar;C:\Users\pc\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.8.1.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk\jars\aws-java-sdk-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-support\jars\aws-java-sdk-support-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-core\jars\aws-java-sdk-core-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-simpledb\jars\aws-java-sdk-simpledb-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-simpleworkflow\jars\aws-java-sdk-simpleworkflow-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-storagegateway\jars\aws-java-sdk-storagegateway-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-route53\jars\aws-java-sdk-route53-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-s3\jars\aws-java-sdk-s3-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-kms\jars\aws-java-sdk-kms-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-importexport\jars\aws-java-sdk-importexport-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-sts\jars\aws-java-sdk-sts-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-sqs\jars\aws-java-sdk-sqs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-rds\jars\aws-java-sdk-rds-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-redshift\jars\aws-java-sdk-redshift-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticbeanstalk\jars\aws-java-sdk-elasticbeanstalk-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-glacier\jars\aws-java-sdk-glacier-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-sns\jars\aws-java-sdk-sns-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-iam\jars\aws-java-sdk-iam-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-datapipeline\jars\aws-java-sdk-datapipeline-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticloadbalancing\jars\aws-java-sdk-elasticloadbalancing-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-emr\jars\aws-java-sdk-emr-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticache\jars\aws-java-sdk-elasticache-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elastictranscoder\jars\aws-java-sdk-elastictranscoder-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ec2\jars\aws-java-sdk-ec2-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-dynamodb\jars\aws-java-sdk-dynamodb-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudtrail\jars\aws-java-sdk-cloudtrail-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudwatch\jars\aws-java-sdk-cloudwatch-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-logs\jars\aws-java-sdk-logs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cognitoidentity\jars\aws-java-sdk-cognitoidentity-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cognitosync\jars\aws-java-sdk-cognitosync-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-directconnect\jars\aws-java-sdk-directconnect-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudformation\jars\aws-java-sdk-cloudformation-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudfront\jars\aws-java-sdk-cloudfront-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-kinesis\jars\aws-java-sdk-kinesis-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-opsworks\jars\aws-java-sdk-opsworks-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ses\jars\aws-java-sdk-ses-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-autoscaling\jars\aws-java-sdk-autoscaling-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudsearch\jars\aws-java-sdk-cloudsearch-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudwatchmetrics\jars\aws-java-sdk-cloudwatchmetrics-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-swf-libraries\jars\aws-java-sdk-swf-libraries-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-codedeploy\jars\aws-java-sdk-codedeploy-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-codepipeline\jars\aws-java-sdk-codepipeline-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-config\jars\aws-java-sdk-config-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-lambda\jars\aws-java-sdk-lambda-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ecs\jars\aws-java-sdk-ecs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-cloudhsm\jars\aws-java-sdk-cloudhsm-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-ssm\jars\aws-java-sdk-ssm-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-workspaces\jars\aws-java-sdk-workspaces-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-machinelearning\jars\aws-java-sdk-machinelearning-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-directory\jars\aws-java-sdk-directory-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-efs\jars\aws-java-sdk-efs-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-codecommit\jars\aws-java-sdk-codecommit-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-devicefarm\jars\aws-java-sdk-devicefarm-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-elasticsearch\jars\aws-java-sdk-elasticsearch-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-waf\jars\aws-java-sdk-waf-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-marketplacecommerceanalytics\jars\aws-java-sdk-marketplacecommerceanalytics-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-inspector\jars\aws-java-sdk-inspector-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-iot\jars\aws-java-sdk-iot-1.10.37.jar;C:\Users\pc\.ivy2\cache\com.amazonaws\aws-java-sdk-api-gateway\jars\aws-java-sdk-api-gateway-1.10.37.jar
-Scala compilation took 1.639903914 s
-New invalidations:
-	Set()
-Initial set of included nodes: Set()
-Previously invalidated, but (transitively) depend on new invalidations:
-	Set()
-All newly invalidated sources after taking into account (previously) recompiled sources:Set()
-Total time: 3 s, completed 23-Mar-2016 01:25:15
-> server-post-command-cleanup
-> server-handle-next-server-request
-> backgroundRunMain com.server.ProcessConrollerServer
-Evaluating tasks: compile:backgroundRunMain
-Running task... Cancel: sbt.server.ServerTaskCancellation@1b6f861, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Copy resource mappings: 
-	
-Total time: 0 s, completed 23-Mar-2016 01:25:19
-> server-post-command-cleanup
-> server-handle-next-server-request
-> jobStop 3
-Evaluating tasks: *:jobStop
-Running task... Cancel: sbt.server.ServerTaskCancellation@799d60, check cycles: false
-Total time: 0 s, completed 23-Mar-2016 01:29:19
-> server-post-command-cleanup
-Exception in thread "sbt-bg-threads-5" java.lang.RuntimeException: Nonzero exit code returned from runner: 1
-	at scala.sys.package$.error(package.scala:27)
-	at sbt.BuildCommon$$anonfun$toError$1.apply(Defaults.scala:1943)
-	at sbt.BuildCommon$$anonfun$toError$1.apply(Defaults.scala:1943)
-> server-handle-next-server-request
-	at scala.Option.foreach(Option.scala:236)
-	at sbt.BuildCommon$class.toError(Defaults.scala:1943)
-	at sbt.package$.toError(package.scala:4)
-	at sbt.plugins.BackgroundRun$$$$b4c18989468ecd5aa4b4422d7494c6$$$$onfun$apply$6.apply(BackgroundRunPlugin.scala:38)
-	at sbt.plugins.BackgroundRun$$$$b4c18989468ecd5aa4b4422d7494c6$$$$onfun$apply$6.apply(BackgroundRunPlugin.scala:37)
-	at sbt.BackgroundThreadPool$$anonfun$1.apply$mcV$sp(AbstractBackgroundJobService.scala:134)
-	at sbt.BackgroundThreadPool$BackgroundRunnable.run(AbstractBackgroundJobService.scala:68)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-> {file:/C:/Users/pc/dev/fyp/fyp-dev/DEV-FYP-Process-Controller-Service/}dev-fyp-process-controller-service/compile:discoveredMainClasses
-Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@1f68069, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Total time: 1 s, completed 23-Mar-2016 01:30:47
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/pc/dev/fyp/fyp-dev/DEV-FYP-Process-Controller-Service/}dev-fyp-process-controller-service/compile:mainClass
-Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@39544a, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Total time: 1 s, completed 23-Mar-2016 01:30:48
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/pc/dev/fyp/fyp-dev/DEV-FYP-Process-Controller-Service/}dev-fyp-process-controller-service/compile:discoveredMainClasses
-Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@195f4fd, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Total time: 1 s, completed 23-Mar-2016 01:30:48
-> server-post-command-cleanup
-> server-handle-next-server-request
 Done executing sbt server engine, result Right(Exit(0))
 Closing listening server socket
 Waiting for socket thread
 Waiting for request processor thread
 Waiting for command engine result
 Returning control to sbt launcher with result Exit(0)
-Closing the 4260@DESKTOP-7UG7O8D logs at Wed Mar 23 01:30:48 GMT 2016, goodbye.
+Closing the 1588@DESKTOP-7UG7O8D logs at Sat Mar 26 01:16:21 GMT 2016, goodbye.

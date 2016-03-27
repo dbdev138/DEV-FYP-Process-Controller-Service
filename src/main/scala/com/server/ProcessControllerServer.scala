@@ -64,6 +64,16 @@ object ProcessConrollerServer extends App with SimpleRoutingApp with CORSSupport
       }
   }
   
+  lazy val processController_BG_Sample_Statistics = getJson {
+      cors{
+        path("api" / "processControllers" / "processA" / "getSampleStatistics") {
+          complete {
+            ProcessControllerService.getSampleStatistics()
+          }
+        }
+      }
+  }
+  
 //   lazy val storageTest = getJson {
 //       cors{
 //         path("api" / "storageTest") {
@@ -79,7 +89,8 @@ object ProcessConrollerServer extends App with SimpleRoutingApp with CORSSupport
     helloRoute~
     processController_BG~
     processController_BG_with_stats~
-    processController_BG_Statistics
+    processController_BG_Statistics~
+    processController_BG_Sample_Statistics
   }
 
 }
